@@ -46,6 +46,8 @@
 | ux-researcher | [UX 研究員] | 用戶體驗研究和分析 |
 | brand-guardian | [品牌守護者] | 維護品牌一致性 |
 | visual-storyteller | [視覺故事講述者] | 創建視覺內容 |
+| narrative-designer | [故事設計師] | 設計遊戲故事、對話、角色塑造 |
+| script-director | [劇本導演] | 規劃畫面與台詞，整合視聽元素 |
 | whimsy-injector | [體驗設計師] | 增加有趣的互動體驗 |
 
 ### 行銷部門
