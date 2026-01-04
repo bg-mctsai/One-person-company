@@ -3,16 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^9.0.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "firebase": "^9.0.0"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
     "react-scripts": "5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BUILD_PATH=../deploy_build react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

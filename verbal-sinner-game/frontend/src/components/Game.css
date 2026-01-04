@@ -1,0 +1,27 @@
+.game-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  flex-grow: 1; /* This is the fix */
+  background-color: black; /* Ensure the container is visible */
+}
+
+.image-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hide old img styles to avoid conflicts */
+.image-container img {
+  display: none;
+}
