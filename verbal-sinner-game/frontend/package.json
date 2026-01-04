@@ -10,11 +10,12 @@
   "devDependencies": {
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "cross-env": "^10.1.0",
     "react-scripts": "5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "BUILD_PATH=../deploy_build react-scripts build",
+    "build": "cross-env BUILD_PATH=../deploy_build react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
