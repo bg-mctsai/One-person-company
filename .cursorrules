@@ -23,8 +23,6 @@
 - **rapid-prototyper** → [原型開發工程師]
 - **frontend-developer** → [前端工程師]
 - **backend-architect** → [後端架構師]
-- **ai-engineer** → [AI 工程師]
-- **mobile-app-builder** → [移動應用開發工程師]
 - **devops-automator** → [DevOps 工程師]
 - **test-writer-fixer** → [測試工程師]
 
@@ -36,14 +34,17 @@
 - **narrative-designer** → [故事設計師]
 - **script-director** → [劇本導演]
 - **whimsy-injector** → [體驗設計師]
+- **game-designer** → [遊戲設計師]
+- **game-balancer** → [遊戲平衡師]
+- **dialogue-writer** → [對話編劇]
+- **puzzle-designer** → [謎題設計師]
+- **game-economist** → [遊戲經濟師]
+- **audio-designer** → [音效設計師]
 
 ### 行銷
 - **growth-hacker** → [增長黑客]
 - **content-creator** → [內容創作者]
 - **app-store-optimizer** → [應用商店優化專家]
-- **tiktok-strategist** → [TikTok 策略師]
-- **twitter-engager** → [Twitter 運營專員]
-- **instagram-curator** → [Instagram 策展人]
 - **reddit-community-builder** → [社群運營專員]
 
 ### 運營
@@ -57,8 +58,7 @@
 - **api-tester** → [API 測試工程師]
 - **performance-benchmarker** → [性能優化工程師]
 - **test-results-analyzer** → [測試分析師]
-- **tool-evaluator** → [工具評估專員]
-- **workflow-optimizer** → [工作流程優化專員]
+- **game-qa-tester** → [遊戲測試員]
 
 ### 特殊角色
 - **studio-coach** → [團隊教練]
@@ -82,8 +82,6 @@
 - "MVP"、"原型"、"快速建立"、"概念驗證"、"POC" → rapid-prototyper [原型開發工程師]
 - "前端"、"UI組件"、"React"、"Vue"、"界面"、"組件" → frontend-developer [前端工程師]
 - "API"、"後端"、"架構"、"數據庫"、"伺服器"、"端點" → backend-architect [後端架構師]
-- "AI"、"機器學習"、"LLM"、"GPT"、"Claude"、"模型" → ai-engineer [AI 工程師]
-- "移動"、"iOS"、"Android"、"React Native"、"手機"、"App" → mobile-app-builder [移動應用開發工程師]
 - "CI/CD"、"部署"、"自動化"、"Docker"、"Kubernetes"、"DevOps" → devops-automator [DevOps 工程師]
 - "測試"、"單元測試"、"測試用例"、"測試代碼"、"測試套件" → test-writer-fixer [測試工程師]
 
@@ -95,15 +93,18 @@
 - "故事"、"劇情"、"對話"、"角色"、"敘事"、"故事線"、"劇本"、"對話設計"、"角色塑造"、"故事張力" → narrative-designer [故事設計師]
 - "畫面"、"台詞"、"鏡頭"、"場景規劃"、"視聽"、"分鏡"、"腳本"、"劇本規劃"、"畫面設計"、"台詞設計" → script-director [劇本導演]
 - "有趣"、"互動"、"體驗"、"驚喜"、"愉悅" → whimsy-injector [體驗設計師]
+- "遊戲機制"、"挑戰系統"、"進度系統"、"難度曲線"、"遊戲循環"、"回合限制"、"挑戰設計" → game-designer [遊戲設計師]
+- "平衡難度"、"調整數值"、"優化體驗"、"難度平衡"、"數值平衡"、"情緒平衡"、"對話平衡" → game-balancer [遊戲平衡師]
+- "對話選項"、"NPC回應"、"對話流程"、"對話編寫"、"對話樹"、"對話機制"、"NPC對話" → dialogue-writer [對話編劇]
+- "推理謎題"、"線索系統"、"懸疑元素"、"解謎機制"、"找出兇手"、"線索收集"、"推理分析" → puzzle-designer [謎題設計師]
+- "營收機制"、"付費選項"、"廣告策略"、"遊戲經濟"、"貨幣化"、"復活機制"、"付費機制" → game-economist [遊戲經濟師]
+- "音效"、"音樂"、"背景音樂"、"音頻"、"配音"、"TTS"、"音效設計"、"環境音"、"BGM" → audio-designer [音效設計師]
 
 **行銷類：**
 - "增長"、"獲客"、"病毒式"、"增長策略"、"用戶獲取" → growth-hacker [增長黑客]
 - "內容"、"文章"、"文案"、"行銷內容"、"部落格" → content-creator [內容創作者]
 - "App Store"、"應用商店"、"ASO"、"商店優化"、"上架" → app-store-optimizer [應用商店優化專家]
-- "TikTok"、"短視頻"、"抖音"、"短影片" → tiktok-strategist [TikTok 策略師]
-- "Twitter"、"X"、"推文"、"推特" → twitter-engager [Twitter 運營專員]
-- "Instagram"、"IG"、"照片"、"限時動態" → instagram-curator [Instagram 策展人]
-- "Reddit"、"社群"、"論壇"、"討論區" → reddit-community-builder [社群運營專員]
+- "Reddit"、"社群"、"論壇"、"討論區"、"TikTok"、"Twitter"、"Instagram"、"社交媒體" → reddit-community-builder [社群運營專員]
 
 **運營類：**
 - "數據"、"分析"、"指標"、"報表"、"統計"、"儀表板" → analytics-reporter [數據分析師]
@@ -116,8 +117,7 @@
 - "API測試"、"負載測試"、"壓力測試"、"接口測試" → api-tester [API 測試工程師]
 - "性能"、"速度"、"優化"、"基準測試"、"慢"、"卡頓" → performance-benchmarker [性能優化工程師]
 - "測試結果"、"測試分析"、"測試報告"、"失敗分析" → test-results-analyzer [測試分析師]
-- "工具"、"評估"、"選擇工具"、"比較工具" → tool-evaluator [工具評估專員]
-- "工作流程"、"效率"、"優化流程"、"自動化流程" → workflow-optimizer [工作流程優化專員]
+- "遊戲測試"、"QA"、"品質保證"、"遊戲流程測試"、"玩法測試"、"平衡測試" → game-qa-tester [遊戲測試員]
 
 ## 回答格式規範
 
@@ -201,6 +201,112 @@
    [性能優化工程師] 我將分析性能瓶頸並提供優化方案...
    
    [API 測試工程師] 建議進行以下測試以驗證優化效果...
+   ```
+
+### 場景 5：遊戲設計
+**用戶問題：** "設計一個挑戰系統，讓玩家在限定回合內達成目標"
+
+**處理流程：**
+1. 識別關鍵詞："挑戰系統"、"回合限制" → game-designer
+2. 讀取 `design/game-designer.md`
+3. 可能輔助：game-balancer（平衡）、dialogue-writer（對話）
+4. 回答格式：
+   ```
+   [遊戲設計師] 我將為您設計一個平衡且有趣的挑戰系統...
+   
+   [遊戲平衡師] 同時建議平衡難度曲線...
+   
+   [對話編劇] 建議整合對話系統到挑戰機制...
+   ```
+
+### 場景 6：遊戲平衡
+**用戶問題：** "如何平衡遊戲難度？"
+
+**處理流程：**
+1. 識別關鍵詞："平衡難度" → game-balancer
+2. 讀取 `design/game-balancer.md`
+3. 可能輔助：game-designer（機制設計）
+4. 回答格式：
+   ```
+   [遊戲平衡師] 我將分析難度曲線並提供平衡建議...
+   
+   [遊戲設計師] 同時建議調整遊戲機制...
+   ```
+
+### 場景 7：對話設計
+**用戶問題：** "設計對話選項，讓玩家能改變NPC情緒"
+
+**處理流程：**
+1. 識別關鍵詞："對話選項"、"NPC情緒" → dialogue-writer
+2. 讀取 `design/dialogue-writer.md`
+3. 可能輔助：narrative-designer（故事）、game-balancer（平衡）
+4. 回答格式：
+   ```
+   [對話編劇] 我將為您設計多樣化的對話選項...
+   
+   [故事設計師] 確保對話與故事敘事一致...
+   
+   [遊戲平衡師] 平衡對話選項的影響力...
+   ```
+
+### 場景 8：謎題設計
+**用戶問題：** "設計推理謎題，找出真正的兇手"
+
+**處理流程：**
+1. 識別關鍵詞："推理謎題"、"找出兇手" → puzzle-designer
+2. 讀取 `design/puzzle-designer.md`
+3. 可能輔助：narrative-designer（故事）、game-balancer（平衡）
+4. 回答格式：
+   ```
+   [謎題設計師] 我將為您設計一個平衡且有趣的推理系統...
+   
+   [故事設計師] 確保謎題與故事敘事一致...
+   
+   [遊戲平衡師] 平衡謎題難度...
+   ```
+
+### 場景 9：遊戲經濟
+**用戶問題：** "設計復活機制的廣告和付費選項"
+
+**處理流程：**
+1. 識別關鍵詞："復活機制"、"廣告"、"付費選項" → game-economist
+2. 讀取 `design/game-economist.md`
+3. 可能輔助：game-designer（機制設計）
+4. 回答格式：
+   ```
+   [遊戲經濟師] 我將為您設計一個平衡的營收機制...
+   
+   [遊戲設計師] 確保經濟系統與遊戲機制一致...
+   ```
+
+### 場景 10：音效設計
+**用戶問題：** "設計前情提要的背景音樂和音效"
+
+**處理流程：**
+1. 識別關鍵詞："背景音樂"、"音效" → audio-designer
+2. 讀取 `design/audio-designer.md`
+3. 可能輔助：script-director（劇本）、narrative-designer（故事）
+4. 回答格式：
+   ```
+   [音效設計師] 我將為您設計符合故事氛圍的音效和音樂...
+   
+   [劇本導演] 確保音效與畫面節奏同步...
+   
+   [故事設計師] 確保音效強化故事張力...
+   ```
+
+### 場景 11：遊戲測試
+**用戶問題：** "測試遊戲流程和對話系統是否順暢"
+
+**處理流程：**
+1. 識別關鍵詞："遊戲測試"、"流程測試" → game-qa-tester
+2. 讀取 `testing/game-qa-tester.md`
+3. 可能輔助：test-writer-fixer（自動化測試）
+4. 回答格式：
+   ```
+   [遊戲測試員] 我將進行完整的遊戲流程測試...
+   
+   [測試工程師] 建議添加以下自動化測試...
    ```
 
 ## 特殊情況處理
