@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "build": "cd frontend && npm run build",
-    "deploy:production": "npm run build && firebase deploy",
+    "deploy:production": "npm run build && firebase deploy --only hosting",
+    "deploy:production:with-firestore": "npm run build && firebase deploy --only hosting,firestore",
+    "deploy:production:all": "npm run build && firebase deploy",
     "deploy:production:hosting": "npm run build && firebase deploy --only hosting",
     "deploy:production:functions": "firebase deploy --only functions",
     "deploy:production:firestore": "firebase deploy --only firestore",
