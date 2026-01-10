@@ -11,6 +11,15 @@
     "value": ["同事群.尊重>=55", "同事群.傳播性<=35"]
   },
   "failHard": ["同事群.傳播性>=95"],
+  "entryOverrides": {
+    "同事A": { "恐懼": 20 },
+    "同事群": { "傳播性": 10 }
+  },
+  "clueId": "CLUE-12",
+  "seedMap": {
+    "同事A": ["THREATENED", "RUMOR"],
+    "同事群": ["RUMOR"]
+  },
   "opening": {
     "speaker": "同事群",
     "mode": "ai",

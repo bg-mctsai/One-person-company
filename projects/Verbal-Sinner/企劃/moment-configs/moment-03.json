@@ -8,6 +8,14 @@
   "supportNpcs": ["同事群"],
   "target": { "type": "emotion", "value": "尊重" },
   "failHard": ["主管.警戒>=90"],
+  "entryOverrides": {
+    "同事群": { "觀望": 10 }
+  },
+  "clueId": "CLUE-03",
+  "seedMap": {
+    "主管": ["WATCH"],
+    "同事群": ["RUMOR"]
+  },
   "opening": {
     "speaker": "主管",
     "mode": "ai",

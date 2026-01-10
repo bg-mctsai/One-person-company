@@ -11,6 +11,16 @@
     "HR.警戒>=95",
     "HR.壓力>=95 且 HR.警戒>=85"
   ],
+  "entryOverrides": {
+    "主管": { "恐懼": 30 },
+    "HR": { "警戒": 5 }
+  },
+  "clueId": "CLUE-11",
+  "seedMap": {
+    "主管": ["THREATENED", "KNOW"],
+    "同事A": ["COLLUSION", "PROBE"],
+    "HR": ["WATCH", "KNOW"]
+  },
   "opening": {
     "speaker": "HR",
     "mode": "ai",

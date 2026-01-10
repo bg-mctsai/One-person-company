@@ -8,6 +8,14 @@
   "supportNpcs": ["同事A"],
   "target": { "type": "emotion", "value": "尊重" },
   "failHard": ["主管.憤怒>=85 且 主管.尊重<35"],
+  "entryOverrides": {
+    "主管": { "困惑": 20 }
+  },
+  "clueId": "CLUE-06",
+  "seedMap": {
+    "同事A": ["COLLUSION", "PROBE"],
+    "主管": ["KNOW"]
+  },
   "opening": {
     "speaker": "主管",
     "mode": "ai",

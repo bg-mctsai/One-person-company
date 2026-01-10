@@ -1,0 +1,50 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // 公共資源（所有人可讀）
+    match /public/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                      request.auth.token.admin == true;
+    }
+    
+    // 場景圖片（所有人可讀）
+    match /scenes/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                      request.auth.token.admin == true;
+    }
+    
+    // NPC 資源（所有人可讀）
+    match /npcs/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                      request.auth.token.admin == true;
+    }
+    
+    // 音頻資源（所有人可讀）
+    match /audio/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                      request.auth.token.admin == true;
+    }
+    
+    // TTS 緩存（所有人可讀，用戶可寫入自己的）
+    match /audio/tts/{userId}/{fileName} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                      request.auth.uid == userId;
+    }
+    
+    // 用戶上傳（僅用戶自己）
+    match /users/{userId}/{allPaths=**} {
+      allow read: if request.auth != null && 
+                     request.auth.uid == userId;
+      allow write: if request.auth != null && 
+                      request.auth.uid == userId &&
+                      request.resource.size < 10 * 1024 * 1024; // 10MB
+    }
+  }
+}
+

@@ -8,6 +8,14 @@
   "supportNpcs": ["旁人"],
   "target": { "type": "emotion", "value": "尊重" },
   "failHard": ["情人C.警戒>=95", "情人C.壓力>=95"],
+  "entryOverrides": {
+    "情人C": { "恐懼": 35 }
+  },
+  "clueId": "CLUE-13",
+  "seedMap": {
+    "情人C": ["THREATENED", "SHAME"],
+    "旁人": ["RUMOR"]
+  },
   "opening": {
     "speaker": "情人C",
     "mode": "ai",

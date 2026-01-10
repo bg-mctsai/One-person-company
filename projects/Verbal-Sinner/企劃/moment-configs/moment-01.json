@@ -8,6 +8,14 @@
   "supportNpcs": ["主管"],
   "target": { "type": "emotion", "value": "尊重" },
   "failHard": ["同事A.警戒>=90"],
+  "entryOverrides": {
+    "同事A": { "信任": 0 }
+  },
+  "clueId": "CLUE-01",
+  "seedMap": {
+    "同事A": ["MASK", "PROBE"],
+    "主管": ["WATCH"]
+  },
   "opening": {
     "speaker": "同事A",
     "mode": "ai",

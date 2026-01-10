@@ -8,6 +8,14 @@
   "supportNpcs": ["主管"],
   "target": { "type": "emotion", "value": "震驚" },
   "failHard": ["同事A.警戒>=95"],
+  "entryOverrides": {
+    "同事A": { "警戒": 10 }
+  },
+  "clueId": "CLUE-08",
+  "seedMap": {
+    "同事A": ["COLLUSION"],
+    "主管": ["KNOW"]
+  },
   "opening": {
     "speaker": "同事A",
     "mode": "ai",

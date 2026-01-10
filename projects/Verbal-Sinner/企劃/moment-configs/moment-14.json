@@ -11,6 +11,10 @@
     "value": ["過去的自己.內在力量>=65", "過去的自己.絕望<=40"]
   },
   "failHard": ["過去的自己.絕望>=98"],
+  "clueId": "CLUE-14",
+  "seedMap": {
+    "過去的自己": ["SELF", "FINAL"]
+  },
   "opening": {
     "speaker": "過去的自己",
     "mode": "ai",

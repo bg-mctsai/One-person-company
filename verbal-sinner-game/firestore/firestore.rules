@@ -1,0 +1,98 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ========== 🔧 Helper Functions ==========
+    
+    // 判斷是否由 Firebase Admin SDK（如 Cloud Functions）發出（無 request.auth）
+    function isFromFunction() {
+      return request.auth == null;
+    }
+    
+    // 判斷是否為登入使用者（有 request.auth）
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    // 判斷是否為管理員
+    function isAdmin() {
+      return request.auth != null && 
+             (request.auth.token.admin == true || 
+              request.auth.token.roles != null && 
+              request.auth.token.roles.hasAny(['admin', '管理員']));
+    }
+    
+    // 判斷是否為當前用戶
+    function isCurrentUser(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+    
+    // ========== 公共數據（只讀） ==========
+    match /public/{document=**} {
+      allow read: if true;
+      allow write: if isFromFunction() || isAdmin();
+    }
+    
+    // ========== 用戶數據 ==========
+    match /users/{userId} {
+      // 用戶資料（用戶自己可讀寫）
+      match /profile {
+        allow read: if isFromFunction() || isCurrentUser(userId);
+        allow write: if isFromFunction() || isCurrentUser(userId);
+      }
+      
+      // 遊戲進度（用戶自己可讀寫）
+      match /progress {
+        allow read: if isFromFunction() || isCurrentUser(userId);
+        allow write: if isFromFunction() || isCurrentUser(userId);
+      }
+      
+      // 挑戰記錄（用戶自己可讀寫）
+      match /challenges/{challengeId} {
+        allow read: if isFromFunction() || isCurrentUser(userId);
+        allow create: if isFromFunction() || isCurrentUser(userId);
+        allow update: if isFromFunction() || 
+                        (isCurrentUser(userId) && 
+                         request.resource.data.userId == userId);
+        allow delete: if false; // 不允許刪除
+      }
+      
+      // 對話會話（用戶自己可讀寫）
+      match /dialogues/{sessionId} {
+        allow read: if isFromFunction() || isCurrentUser(userId);
+        allow create: if isFromFunction() || isCurrentUser(userId);
+        allow update: if isFromFunction() || 
+                        (isCurrentUser(userId) && 
+                         request.resource.data.userId == userId);
+        allow delete: if isFromFunction() || isCurrentUser(userId);
+      }
+      
+      // 情緒狀態（用戶自己可讀寫）
+      match /emotions/{npcId} {
+        allow read: if isFromFunction() || isCurrentUser(userId);
+        allow write: if isFromFunction() || isCurrentUser(userId);
+      }
+      
+      // 關係狀態（用戶自己可讀寫）
+      match /relationships/{npcId} {
+        allow read: if isFromFunction() || isCurrentUser(userId);
+        allow write: if isFromFunction() || isCurrentUser(userId);
+      }
+    }
+    
+    // ========== 實時會話（可選） ==========
+    match /sessions/{sessionId} {
+      allow read: if isFromFunction() || isSignedIn();
+      allow create: if isFromFunction() || isSignedIn();
+      allow update: if isFromFunction() || 
+                      (isSignedIn() && 
+                       (request.resource.data.userId == request.auth.uid ||
+                        resource.data.userId == request.auth.uid));
+      allow delete: if isFromFunction() || 
+                      (isSignedIn() && 
+                       resource.data.userId == request.auth.uid);
+    }
+  }
+}
+

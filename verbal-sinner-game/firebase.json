@@ -1,4 +1,22 @@
 {
+  "firestore": {
+    "rules": "firestore/firestore.rules",
+    "indexes": "firestore/firestore-indexes.json",
+    "database": "(default)"
+  },
+  "functions": {
+    "source": "functions",
+    "codebase": "default",
+    "region": "asia-east1",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "*.local"
+    ],
+    "predeploy": []
+  },
   "hosting": {
     "public": "deploy_build",
     "ignore": [
@@ -11,6 +29,29 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600"
+          }
+        ]
+      }
     ]
+  },
+  "storage": {
+    "rules": "storage/storage.rules"
   }
 }

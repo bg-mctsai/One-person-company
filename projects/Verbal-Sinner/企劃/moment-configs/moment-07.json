@@ -11,6 +11,14 @@
     "主管.警戒>=90",
     "主管.壓力>=95"
   ],
+  "entryOverrides": {
+    "同事A": { "恐懼": 20 }
+  },
+  "clueId": "CLUE-07",
+  "seedMap": {
+    "同事A": ["THREATENED", "RUMOR"],
+    "主管": ["WATCH"]
+  },
   "opening": {
     "speaker": "主管",
     "mode": "ai",

@@ -8,6 +8,13 @@
   "supportNpcs": [],
   "target": { "type": "emotion", "value": "好感" },
   "failHard": ["情人C.警戒>=85"],
+  "entryOverrides": {
+    "情人C": { "信任": 5 }
+  },
+  "clueId": "CLUE-04",
+  "seedMap": {
+    "情人C": ["REPORT"]
+  },
   "opening": {
     "speaker": "情人C",
     "mode": "ai",

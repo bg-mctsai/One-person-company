@@ -8,6 +8,13 @@
   "supportNpcs": [],
   "target": { "type": "emotion", "value": "認同" },
   "failHard": ["同事A.憤怒>=80"],
+  "entryOverrides": {
+    "同事A": { "信任": 5 }
+  },
+  "clueId": "CLUE-02",
+  "seedMap": {
+    "同事A": ["PROBE"]
+  },
   "opening": {
     "speaker": "同事A",
     "mode": "ai",
