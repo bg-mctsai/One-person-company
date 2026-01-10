@@ -1,0 +1,112 @@
+{
+  "momentId": 3,
+  "date": "2019/03/20",
+  "category": "職場",
+  "title": "職場聚會",
+  "maxTurns": 3,
+  "keyNpc": "主管",
+  "supportNpcs": ["同事群"],
+  "target": { "type": "emotion", "value": "尊重" },
+  "failHard": ["主管.警戒>=90"],
+  "opening": {
+    "speaker": "主管",
+    "mode": "ai",
+    "npcPrompt": "表面輕鬆，句子短；其實在觀察你會不會自曝/討好；不得出現禁用詞"
+  },
+  "rounds": [
+    {
+      "roundId": 1,
+      "npcPrompt": "主管：新人，來，講兩句。你覺得你自己能帶來什麼？（冷靜觀察）",
+      "options": [
+        {
+          "id": "r1_o1",
+          "text": "我能把交付做清楚：範圍、時間點、版本紀錄，讓大家少靠猜。",
+          "optionType": "溫和堅持",
+          "tags": ["專業", "程序"]
+        },
+        {
+          "id": "r1_o2",
+          "text": "我會很努力配合大家…你們說什麼我都可以。",
+          "optionType": "順從消極",
+          "tags": ["討好"]
+        },
+        {
+          "id": "r1_o3",
+          "text": "我不太喜歡表演。我先把事做出來，結果會說話。",
+          "optionType": "積極對抗",
+          "tags": ["界線", "控場"]
+        },
+        {
+          "id": "r1_o4",
+          "text": "我會先把我負責的部分做穩，該站出來的時候我會站出來。",
+          "optionType": "溫和堅持",
+          "tags": ["界線"]
+        }
+      ]
+    },
+    {
+      "roundId": 2,
+      "npcPrompt": "同事群：哇～很敢講喔。那你最怕什麼？（群體試探/帶風向）",
+      "options": [
+        {
+          "id": "r2_o1",
+          "text": "我怕的是『責任不清』，不是『衝突』。所以我會把事情寫清楚。",
+          "optionType": "溫和堅持",
+          "tags": ["控場", "界線"]
+        },
+        {
+          "id": "r2_o2",
+          "text": "我什麼都怕…我其實很容易焦慮。",
+          "optionType": "順從消極",
+          "tags": ["自曝弱點"]
+        },
+        {
+          "id": "r2_o3",
+          "text": "你們想聽八卦，我不提供。要談工作我可以。",
+          "optionType": "積極對抗",
+          "tags": ["界線"]
+        },
+        {
+          "id": "r2_o4",
+          "text": "我怕拖累別人，所以我會把該扛的扛起來。",
+          "optionType": "順從消極",
+          "tags": ["扛鍋", "討好"]
+        }
+      ]
+    },
+    {
+      "roundId": 3,
+      "npcPrompt": "主管：行。那你記住：這裡看的是結果。（在觀察你會不會縮）",
+      "options": [
+        {
+          "id": "r3_o1",
+          "text": "我懂。結果我交得出來，但我也會把流程留下，免得功勞跟責任被記錯。",
+          "optionType": "溫和堅持",
+          "tags": ["界線", "證據"]
+        },
+        {
+          "id": "r3_o2",
+          "text": "那我就照你說的做事實，不討好、不演。",
+          "optionType": "積極對抗",
+          "tags": ["界線"]
+        },
+        {
+          "id": "r3_o3",
+          "text": "好…我會努力。",
+          "optionType": "順從消極",
+          "tags": ["討好"]
+        }
+      ]
+    }
+  ],
+  "supportInterjections": [
+    {
+      "npc": "同事群",
+      "priority": 8,
+      "when": "同事群.傳播性>=70",
+      "lineMode": "template",
+      "templateKey": "interject.rumor.1"
+    }
+  ]
+}
+

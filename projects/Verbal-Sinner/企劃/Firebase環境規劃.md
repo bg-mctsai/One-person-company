@@ -73,12 +73,12 @@ firestore/
 
 ```typescript
 interface Challenge {
-  id: string;                    // 挑戰 ID (1-20)
+  id: string;                    // 挑戰 ID (1-14)
   title: string;                 // 挑戰標題
   description: string;           // 挑戰描述
   category: '職場' | '朋友' | '情人' | '自我';
   difficulty: '簡單' | '中等' | '困難';
-  maxRounds: number;             // 最大對話回合數 (3-5)
+  maxRounds: number;             // 最大對話輪次 (3-8)
   targetEmotion: string;         // 目標情緒類型
   npcId: string;                 // 對應 NPC ID
   storyDate: string;             // 故事日期 (ISO 8601)
@@ -194,7 +194,7 @@ interface NPC {
 interface DialogueOption {
   id: string;
   challengeId: string;          // 所屬挑戰
-  roundNumber: number;           // 回合數 (1, 2, 3...)
+  roundNumber: number;           // 輪次 (1, 2, 3...)
   optionText: string;            // 選項文字
   optionType: '積極對抗' | '溫和堅持' | '情感訴求' | '順從消極';
   
@@ -204,7 +204,7 @@ interface DialogueOption {
   };
   
   // 後續處理
-  nextRound?: number;            // 下一回合編號
+  nextRound?: number;            // 下一輪次編號
   isTerminal?: boolean;          // 是否終止對話
   
   // AI 生成相關
@@ -340,7 +340,7 @@ interface UserChallenge {
   
   // 挑戰結果
   result: {
-    roundsUsed: number;          // 使用的回合數
+    roundsUsed: number;          // 使用的輪次
     finalEmotion: string;        // 最終情緒
     targetAchieved: boolean;     // 是否達成目標
     score?: number;              // 評分 (0-100)
