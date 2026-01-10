@@ -36,6 +36,7 @@
 - **narrative-designer** → [故事設計師]
 - **script-director** → [劇本導演]
 - **whimsy-injector** → [體驗設計師]
+- **prompt-specialist** → [Prompt 專員]
 
 ### 行銷
 - **growth-hacker** → [增長黑客]
@@ -95,6 +96,7 @@
 - "故事"、"劇情"、"對話"、"角色"、"敘事"、"故事線"、"劇本"、"對話設計"、"角色塑造"、"故事張力" → narrative-designer [故事設計師]
 - "畫面"、"台詞"、"鏡頭"、"場景規劃"、"視聽"、"分鏡"、"腳本"、"劇本規劃"、"畫面設計"、"台詞設計" → script-director [劇本導演]
 - "有趣"、"互動"、"體驗"、"驚喜"、"愉悅" → whimsy-injector [體驗設計師]
+- "Prompt"、"AI圖片生成"、"ComfyUI"、"Stable Diffusion"、"角色Prompt"、"圖片生成"、"AI繪圖" → prompt-specialist [Prompt 專員]
 
 **行銷類：**
 - "增長"、"獲客"、"病毒式"、"增長策略"、"用戶獲取" → growth-hacker [增長黑客]
