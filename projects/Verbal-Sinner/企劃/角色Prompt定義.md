@@ -97,41 +97,41 @@ Seed Range: 2000-2999
 
 ---
 
-### 朋友B（背叛者）
+### 同事B（同事群代表 / 輿論放大器）
 
-#### 朋友B - 基礎 Prompt
+#### 同事B - 基礎 Prompt
 ```
-Friend B Character Prompt:
-A person in their late 20s, Asian features, friendly and approachable appearance, wearing casual trendy clothing, warm smile on surface but with opportunistic eyes, average build, well-dressed, social appearance, coffee shop aesthetic
+Colleague B Character Prompt:
+A person in their early to mid 30s, Asian features, office-smart appearance, wearing neat business casual, friendly talkative smile on surface but with cautious calculating eyes, average build, holding phone often, looks like a social hub in office, subtle superiority, film noir office aesthetic, realistic rendering, high contrast lighting
 
 Consistent Features:
-- Age: Late 20s
+- Age: Early to mid 30s
 - Build: Average
-- Expression: Surface warm, but eyes show opportunism
-- Clothing: Casual trendy, well-coordinated
-- Hair: Stylish, well-maintained
-- Posture: Relaxed, social, approachable
-- Eyes: Warm but opportunistic, observant
+- Expression: Surface friendly, eyes cautious/calculating
+- Clothing: Neat business casual, office-smart
+- Hair: Clean, professional, slightly styled
+- Posture: Relaxed, socially confident, always "in the know"
+- Eyes: Observant, scanning reactions
 
 Personality Traits (affects expression):
-- Surface: Warm, friendly, supportive
-- Hidden: Opportunistic, selfish, calculating
+- Surface: Helpful, chatty, "I'm just sharing info"
+- Hidden: Opportunistic, status-sensitive, rumor amplifier
 
-Style: Realistic, casual, social setting
+Style: Realistic, office, subtle tension
 Model: RealisticVision
 Seed Range: 3000-3999
 ```
 
-#### 朋友B - 不同場景
+#### 同事B - 不同場景
 
-**模糊出現（場景二）**
+**模糊出現（辦公室場景）**
 ```
-[朋友B基礎 Prompt], gaussian blur 40-60%, appearing in background, phone in hand, observing, subtle presence, cold color tone
+[同事B基礎 Prompt], gaussian blur 40-60%, appearing in background, phone in hand, observing, subtle presence, cold color tone
 ```
 
-**聊天記錄場景（場景二）**
+**聊天記錄場景（辦公室）**
 ```
-[朋友B基礎 Prompt], looking at phone, chat messages visible, subtle guilty expression, cold color tone, dramatic lighting
+[同事B基礎 Prompt], looking at phone, chat messages visible, subtle smug expression, cold color tone, dramatic lighting
 ```
 
 ---
@@ -214,6 +214,37 @@ Seed Range: 5000-5999
 
 ---
 
+### HR（神秘人X / 真兇，但不明目張膽）
+
+#### HR - 基礎 Prompt
+```
+HR Character Prompt:
+A person in their early to mid 30s, Asian features, clean and composed appearance, wearing minimalistic business attire, neutral professional smile, eyes cold and controlled, posture calm and untouchable, holding a folder or laptop, "policy-first" aura, office HR setting, film noir style, realistic rendering, high contrast lighting
+
+Consistent Features:
+- Age: Early to mid 30s
+- Build: Average
+- Expression: Neutral, polite, emotionally flat
+- Clothing: Minimalistic business attire, tidy
+- Posture: Calm, controlled, never rushed
+- Eyes: Cold, controlled, judging without showing
+
+Personality Traits (affects expression):
+- Surface: Neutral, procedural, "I'm just following policy"
+- Hidden: Resentful, manipulative, enjoys control
+
+Style: Realistic, office, subtle menace
+Model: RealisticVision
+Seed Range: 6000-6999
+```
+
+#### HR - 不同場景
+
+**程序宣讀（挑戰11 / 會議室）**
+```
+[HR基礎 Prompt], in meeting room, holding printed documents, pointing to policy text, neutral smile, cold eyes, dramatic lighting, cold color tone
+```
+
 ## 場景 Prompt 模板
 
 ### 場景一：辦公室霸凌的開始
@@ -258,7 +289,7 @@ Scene: Dark room, medium shot, chat messages on screen, cold color tone, shadows
 
 Characters:
 - [主角 - 震驚/憤怒/失望] (looking at phone)
-- [朋友B - 聊天記錄場景] (blurred 40-60% in background)
+- [同事B - 聊天記錄場景] (blurred 40-60% in background)
 
 Props: Phone showing chat messages, secrets forwarded, calendar 2020
 
@@ -385,7 +416,7 @@ Sampler: DPM++ 2M Karras or Euler a
 ### 角色專用 Seed 範圍
 - 主角: 1000-1999
 - 同事A: 2000-2999
-- 朋友B: 3000-3999
+- 同事B: 3000-3999
 - 同事C: 4000-4999
 - 主管: 5000-5999
 - 場景: 6000-9999
@@ -403,7 +434,7 @@ Mood: Dark, suspenseful, emotional, dramatic
 
 ### 高斯模糊（關鍵人物）
 - **透明度**: 40-60%
-- **應用對象**: 同事A、朋友B、同事C、主管在背景出現時
+- **應用對象**: 同事A、同事B、同事C、主管在背景出現時
 - **工具**: ComfyUI ImageBlur 節點 或 Photoshop/GIMP
 
 ### 半透明效果（問號、線索碎片）
