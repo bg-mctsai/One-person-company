@@ -1,29 +1,29 @@
 {
   "momentId": 9,
   "date": "2019/07/25",
-  "category": "情人",
-  "title": "情人的謊言",
+  "category": "辦公室霸凌延伸",
+  "title": "辦公室戀情的謊言",
   "maxTurns": 5,
-  "keyNpc": "情人C",
+  "keyNpc": "同事C",
   "supportNpcs": [],
   "target": { "type": "emotion", "value": "愧疚" },
-  "failHard": ["情人C.逃避>=95"],
+  "failHard": ["同事C.逃避>=95"],
   "entryOverrides": {
-    "情人C": { "罪惡感": 5 }
+    "同事C": { "罪惡感": 5 }
   },
   "clueId": "CLUE-09",
   "seedMap": {
-    "情人C": ["LIE"]
+    "同事C": ["LIE"]
   },
   "opening": {
-    "speaker": "情人C",
+    "speaker": "同事C",
     "mode": "ai",
     "npcPrompt": "溫柔但滑、避重就輕；被逼就轉移；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "情人C：你怎麼了？你今天眼神很兇欸。（先裝無辜）",
+      "npcPrompt": "同事C：你怎麼了？你今天眼神很兇欸。（先裝無辜）",
       "options": [
         {
           "id": "r1_o1",
@@ -53,7 +53,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "情人C：你想太多了啦。別把事情弄複雜。（LIE/逃避）",
+      "npcPrompt": "同事C：你想太多了啦。別把事情弄複雜。（LIE/逃避）",
       "options": [
         {
           "id": "r2_o1",
@@ -83,7 +83,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "情人C：（眼神閃一下）我只是怕你多想，所以才沒講。（心虛）",
+      "npcPrompt": "同事C：（眼神閃一下）我只是怕你多想，所以才沒講。（心虛）",
       "options": [
         {
           "id": "r3_o1",
@@ -107,7 +107,7 @@
     },
     {
       "roundId": 4,
-      "npcPrompt": "情人C：我沒有做錯什麼…你不要逼我。（壓力/逃避）",
+      "npcPrompt": "同事C：我沒有做錯什麼…你不要逼我。（壓力/逃避）",
       "options": [
         {
           "id": "r4_o1",
@@ -131,7 +131,7 @@
     },
     {
       "roundId": 5,
-      "npcPrompt": "情人C：……我承認我有瞞你一些事。（愧疚邊緣）",
+      "npcPrompt": "同事C：……我承認我有瞞你一些事。（愧疚邊緣）",
       "options": [
         {
           "id": "r5_o1",

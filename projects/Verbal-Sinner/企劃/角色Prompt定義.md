@@ -58,7 +58,7 @@ Seed Range: 1000-1999
 
 ---
 
-### 同事A（職場陷害者）
+### 同事A（辦公室霸凌者）
 
 #### 同事A - 基礎 Prompt
 ```
@@ -136,41 +136,41 @@ Seed Range: 3000-3999
 
 ---
 
-### 情人C（傷害者）
+### 同事C（辦公室戀情被利用）
 
-#### 情人C - 基礎 Prompt
+#### 同事C - 基礎 Prompt
 ```
-Lover C Character Prompt:
-A person in their late 20s to early 30s, Asian features, attractive appearance, wearing stylish casual or semi-formal clothing, gentle smile on surface but with distant eyes, average to slim build, well-groomed, romantic appearance, dating scene aesthetic
+Colleague C Character Prompt:
+A person in their late 20s to early 30s, Asian features, attractive appearance, wearing professional business attire or stylish casual, gentle smile on surface but with distant eyes, average to slim build, well-groomed, professional appearance, office setting aesthetic
 
 Consistent Features:
 - Age: Late 20s to early 30s
 - Build: Average to slim
 - Expression: Surface gentle, but eyes show distance
-- Clothing: Stylish casual or semi-formal, fashionable
+- Clothing: Professional business attire or stylish casual, fashionable
 - Hair: Well-styled, attractive
 - Posture: Relaxed, charming, but distant
 - Eyes: Gentle but distant, avoiding deep connection
 
 Personality Traits (affects expression):
 - Surface: Gentle, caring, romantic
-- Hidden: Distant, cold, afraid of commitment
+- Hidden: Distant, cold, afraid of commitment, may be part of office bullying plan
 
-Style: Realistic, romantic but cold undertone
+Style: Realistic, professional but cold undertone
 Model: RealisticVision
 Seed Range: 4000-4999
 ```
 
-#### 情人C - 不同場景
+#### 同事C - 不同場景
 
-**模糊出現（場景三）**
+**模糊出現（辦公室場景）**
 ```
-[情人C基礎 Prompt], gaussian blur 40-60%, appearing in background, looking at phone, distant expression, cold color tone
+[同事C基礎 Prompt], gaussian blur 40-60%, appearing in background, looking at phone, distant expression, cold color tone, office setting
 ```
 
-**社群動態場景（場景三）**
+**辦公室聚會場景（辦公室場景）**
 ```
-[情人C基礎 Prompt], looking at phone, social media feed visible, photos without main character, distant expression, cold color tone, dramatic lighting
+[同事C基礎 Prompt], in office setting, looking at phone, office party photos visible, photos without main character, distant expression, cold color tone, dramatic lighting
 ```
 
 ---
@@ -216,7 +216,7 @@ Seed Range: 5000-5999
 
 ## 場景 Prompt 模板
 
-### 場景一：職場慢性凌遲
+### 場景一：辦公室霸凌的開始
 
 #### 圖片1：辦公室全景（夜晚）
 ```
@@ -239,7 +239,7 @@ Characters:
 Negative: clear faces, bright, cheerful, daytime
 ```
 
-### 場景二：朋友的背叛
+### 場景二：辦公室霸凌的延伸（已移除朋友線，改為辦公室戀情被利用）
 
 #### 圖片1：深夜房間 + 手機
 ```
@@ -265,7 +265,7 @@ Props: Phone showing chat messages, secrets forwarded, calendar 2020
 Negative: clear faces, bright, happy
 ```
 
-### 場景三：愛情只是交易
+### 場景三：辦公室霸凌的延伸（辦公室戀情被利用）
 
 #### 圖片1：社群動態
 ```
@@ -386,7 +386,7 @@ Sampler: DPM++ 2M Karras or Euler a
 - 主角: 1000-1999
 - 同事A: 2000-2999
 - 朋友B: 3000-3999
-- 情人C: 4000-4999
+- 同事C: 4000-4999
 - 主管: 5000-5999
 - 場景: 6000-9999
 
@@ -403,7 +403,7 @@ Mood: Dark, suspenseful, emotional, dramatic
 
 ### 高斯模糊（關鍵人物）
 - **透明度**: 40-60%
-- **應用對象**: 同事A、朋友B、情人C、主管在背景出現時
+- **應用對象**: 同事A、朋友B、同事C、主管在背景出現時
 - **工具**: ComfyUI ImageBlur 節點 或 Photoshop/GIMP
 
 ### 半透明效果（問號、線索碎片）

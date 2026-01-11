@@ -40,16 +40,16 @@
 | 1 | CLUE-01 | 同事A:MASK/PROBE；主管:WATCH | 同事A.信任+0 |
 | 2 | CLUE-02 | 同事A:PROBE | 同事A.信任+5 |
 | 3 | CLUE-03 | 主管:WATCH；同事群:RUMOR | 同事群.觀望+10 |
-| 4 | CLUE-04 | 情人C:REPORT | 情人C.信任+5 |
-| 5 | CLUE-05 | 情人C:LIE/PROBE | 情人C.警戒+5 |
+| 4 | CLUE-04 | 同事C:REPORT | 同事C.信任+5 |
+| 5 | CLUE-05 | 同事C:LIE/PROBE | 同事C.警戒+5 |
 | 6 | CLUE-06 | 同事A:COLLUSION/PROBE；主管:KNOW | 主管.困惑+20 |
 | 7 | CLUE-07 | 同事A:THREATENED/RUMOR；主管:WATCH | 同事A.恐懼+20 |
 | 8 | CLUE-08 | 同事A:COLLUSION；主管:KNOW | 同事A.警戒+10 |
-| 9 | CLUE-09 | 情人C:LIE | 情人C.罪惡感+5 |
-| 10 | CLUE-10 | 情人C:REPORT/MASK | 情人C.警戒+10 |
+| 9 | CLUE-09 | 同事C:LIE | 同事C.罪惡感+5 |
+| 10 | CLUE-10 | 同事C:REPORT/MASK | 同事C.警戒+10 |
 | 11 | CLUE-11* | 主管:THREATENED/KNOW；同事A:COLLUSION/PROBE；HR:WATCH/KNOW | 主管.恐懼+30；HR.警戒+5 |
 | 12 | CLUE-12* | 同事A:THREATENED/RUMOR；同事群:RUMOR | 同事A.恐懼+20；同事群.傳播性+10 |
-| 13 | CLUE-13* | 情人C:THREATENED/SHAME；旁人:RUMOR | 情人C.恐懼+35 |
+| 13 | CLUE-13* | 同事C:THREATENED/SHAME；旁人:RUMOR | 同事C.恐懼+35 |
 | 14 | CLUE-14* | 過去的自己:SELF/FINAL | （照初始） |
 
 ---

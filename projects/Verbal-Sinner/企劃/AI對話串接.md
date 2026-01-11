@@ -6,16 +6,64 @@
 
 ## 1) 架構（最少可跑版本）
 
-- **前端**：呼叫 Firebase callable function：`generateNpcReply`
+- **前端**：呼叫兩個 Firebase callable functions：
+  - `parsePlayerInput`：解析玩家輸入文字為策略類型 + tags
+  - `generateNpcReply`：生成 NPC 回覆
 - **後端**：Firebase Functions 代你呼叫 OpenAI / Gemini（API key 只放在 functions）
 - **回傳**：統一 JSON，前端再接：
-  - NPC 回覆文字（顯示）
-  - 情緒提示（用來驅動/輔助屬性→情緒映射）
-  - notes（可用於 debug 或作為毒舌系統插話的判斷材料）
+  - `parsePlayerInput` 回傳：`optionType`, `tags`, `confidence`, `parsedIntent`
+  - `generateNpcReply` 回傳：NPC 回覆文字、情緒提示、notes
 
 ---
 
-## 2) Firebase Functions：`generateNpcReply`
+## 2) Firebase Functions：`parsePlayerInput`（新增）
+
+### 位置
+
+- `verbal-sinner-game/functions/index.js`
+
+### 輸入（data）
+
+```json
+{
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "playerText": "這不是我造成的。我可以把時間線和文件攤開。",
+  "momentId": 7,
+  "roundId": 1,
+  "availableOptionTypes": ["積極對抗", "溫和堅持", "情感訴求", "順從消極"],
+  "tongueHints": [
+    {
+      "text": "我先把時間線講清楚...",
+      "optionType": "溫和堅持",
+      "tags": ["證據"]
+    },
+    {
+      "text": "這不是我造成的。請你先看我這份交付紀錄。",
+      "optionType": "積極對抗",
+      "tags": ["證據", "界線"]
+    }
+  ]
+}
+```
+
+### 輸出（return）
+
+```json
+{
+  "optionType": "積極對抗",
+  "tags": ["證據"],
+  "confidence": 0.85,
+  "parsedIntent": "玩家提出證據反駁，態度強硬",
+  "fallbackHintId": null
+}
+```
+
+> 如果解析失敗或信心度過低（< 0.6），可回傳 `fallbackHintId` 指向最接近的毒舌提示選項。
+
+---
+
+## 3) Firebase Functions：`generateNpcReply`
 
 ### 位置
 
@@ -57,7 +105,7 @@
 
 ---
 
-## 3) 金鑰與設定（不要放前端）
+## 4) 金鑰與設定（不要放前端）
 
 ## 3.1 強烈建議：App Check（匿名大量玩家必備）
 
@@ -88,7 +136,7 @@
 
 ---
 
-## 4) 跟「毒舌系統」怎麼共存？
+## 5) 跟「毒舌系統」怎麼共存？
 
 - **NPC 回覆**：交給 AI（即時、符合人味）
 - **毒舌系統**：仍走你既有 `介面字串表.md` 的規則（進場/選項前/成立/線索/失手/結算），由前端或規則引擎決定是否插話
@@ -98,7 +146,7 @@
 
 ---
 
-## 5) 下一步（你想要的「更黑、更準」）
+## 6) 下一步（你想要的「更黑、更準」）
 
 - **結構化輸出**：要求 AI 回傳 `emotion_delta` / `suspicion_hint` 之類欄位，讓屬性更新更穩
 - **多模型策略**：
@@ -108,7 +156,7 @@
 
 ---
 
-## 6) 成本控管：把「多次嘗試」變成可控的代價
+## 7) 成本控管：把「多次嘗試」變成可控的代價
 
 你說「復活一定要刷廣告」**確實會降低總會話數**，但它不會自動限制「每個玩家在對話中呼叫 AI 的次數」。  
 要真的控成本，建議做成 **三層控管**（從硬到軟）：
@@ -154,7 +202,7 @@
 
 ---
 
-## 7) 玩家付費會很難嗎？（不難，但要先決定「買什麼」與「綁到誰」）
+## 8) 玩家付費會很難嗎？（不難，但要先決定「買什麼」與「綁到誰」）
 
 ### 7.1 付費商品（少 SKU、對體驗友善）
 
@@ -183,7 +231,7 @@
 
 ---
 
-## 8) 金手指（提示）要「明確功能」，不要 AI 自己發揮
+## 9) 金手指（提示）要「明確功能」，不要 AI 自己發揮
 
 你要的金手指核心是兩件事（且可完全規則化）：
 
@@ -229,7 +277,7 @@
 - `tag`: 試探/拖延/轉移/掩飾/求和/威脅（可選）
 
 
-### 7.2 Web（你現在 Firebase Hosting/React）最短路徑：Stripe
+### 8.2 Web（你現在 Firebase Hosting/React）最短路徑：Stripe
 
 最少要做的後端元件：
 
@@ -237,7 +285,7 @@
 - **Webhook**：Stripe 付款成功事件 → 後端寫入 entitlement（例如：`no_ads=true`、`ai_quota=+100`）
 - **查 entitlement**：前端呼叫後端拿目前權益，控制是否要看廣告/是否能用 AI
 
-### 7.3 「前端不登入」的前提下，付費要怎麼綁？
+### 8.3 「前端不登入」的前提下，付費要怎麼綁？
 
 純匿名（完全沒有 uid）會讓你很難：
 
