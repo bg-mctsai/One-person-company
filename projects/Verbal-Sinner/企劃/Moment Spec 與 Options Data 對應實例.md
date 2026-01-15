@@ -29,7 +29,7 @@ Options Data 格式（前端使用）
 | `target` | - | 成功條件（前端判定用） |
 | `failHard` | - | 失敗條件（前端判定用） |
 | `entryOverrides` | - | 入幕屬性修正（後端處理） |
-| `clueId` | - | 線索 ID（成功後產出） |
+| `clueIds` | - | 線索 ID（成功後產出；可一次多條） |
 | `seedMap` | - | 金手指 seed（對應 `金手指提示庫.md`） |
 
 ---
@@ -50,7 +50,7 @@ Options Data 格式（前端使用）
 | target | targetEmotion=尊重 |
 | failHard | 主管.警戒>=90 或 主管.壓力>=95 |
 | entryOverrides | 同事A.恐懼+20 |
-| clueId | CLUE-07 |
+| clueIds | [CLUE-07] |
 | seedMap | 同事A:THREATENED/RUMOR；主管:WATCH |
 
 ### 2.2 Options Data 格式（moment-07.json）
@@ -69,6 +69,7 @@ Options Data 格式（前端使用）
     "主管.警戒>=90",
     "主管.壓力>=95"
   ],
+  "clueIds": ["CLUE-07"],
   "opening": {
     "speaker": "主管",
     "mode": "ai",
@@ -127,7 +128,7 @@ Options Data 格式（前端使用）
 ✅ **target**: targetEmotion=尊重 → target.value = "尊重"  
 ✅ **failHard**: 主管.警戒>=90 → failHard 包含此條件  
 ✅ **entryOverrides**: 同事A.恐懼+20 → 後端處理（不在 JSON 中）  
-✅ **clueId**: CLUE-07 → 成功後產出（不在 JSON 中）  
+✅ **clueIds**: [CLUE-07] → 成功後產出（JSON 或主線 map）  
 ✅ **seedMap**: 同事A:THREATENED/RUMOR → 對應 `金手指提示庫.md`  
 
 ---

@@ -39,18 +39,23 @@ const VALID_TEMPLATE_KEYS = [
   'interject.threatened.3',
   'interject.know.1',
   'interject.know.2',
+  'interject.interrupt.manager.1',
+  'interject.interrupt.hr.1',
+  'interject.interrupt.colleagueB.1',
 ];
 
 function validateMomentConfigs() {
   const errors = [];
   const warnings = [];
   const configsDir = path.join(__dirname, '../moment-configs');
+  const mainlineMapPath = path.join(configsDir, 'mainline-map.json');
 
   console.log('🔍 開始驗證 moment-configs...\n');
 
   // 檢查所有 14 個時刻都存在
   for (let i = 1; i <= 14; i++) {
-    const filePath = path.join(configsDir, `moment-${i}.json`);
+    const fileName = `moment-${String(i).padStart(2, '0')}.json`;
+    const filePath = path.join(configsDir, fileName);
     
     if (!fs.existsSync(filePath)) {
       errors.push(`❌ 時刻 ${i} 文件不存在: ${filePath}`);
@@ -157,6 +162,45 @@ function validateMomentConfigs() {
         errors.push(`❌ 時刻 ${i}: 缺少必要欄位 "${field}"`);
       }
     });
+
+    // clueId / clueIds（至少要有一個）
+    if (!('clueId' in config) && !('clueIds' in config)) {
+      warnings.push(`⚠️  時刻 ${i}: 缺少 clueId/clueIds（主線可從 mainline-map.json 發放，但建議仍保留）`);
+    }
+    if ('clueIds' in config && (!Array.isArray(config.clueIds) || config.clueIds.length === 0)) {
+      errors.push(`❌ 時刻 ${i}: clueIds 必須是非空陣列`);
+    }
+  }
+
+  // 驗證精簡主線 map（10 幕）
+  if (!fs.existsSync(mainlineMapPath)) {
+    errors.push(`❌ 缺少主線配置檔: ${mainlineMapPath}`);
+  } else {
+    try {
+      const map = JSON.parse(fs.readFileSync(mainlineMapPath, 'utf-8'));
+      if (map.mode !== 'mainline-10') warnings.push(`⚠️  mainline-map.json: mode 建議為 "mainline-10"（目前是 "${map.mode}"）`);
+      if (map.totalMoments !== 10) errors.push(`❌ mainline-map.json: totalMoments 必須為 10（目前是 ${map.totalMoments}）`);
+      if (!Array.isArray(map.moments) || map.moments.length !== 10) errors.push(`❌ mainline-map.json: moments 必須有 10 筆（目前是 ${map.moments?.length ?? 'N/A'}）`);
+
+      const ids = new Set();
+      (map.moments || []).forEach((m, idx) => {
+        const at = `mainline moment[${idx}]`;
+        if (typeof m.mainMomentId !== 'number') errors.push(`❌ ${at}: mainMomentId 必須是 number`);
+        if (ids.has(m.mainMomentId)) errors.push(`❌ ${at}: mainMomentId 重複 ${m.mainMomentId}`);
+        ids.add(m.mainMomentId);
+        if (!Array.isArray(m.sourceMomentIds) || m.sourceMomentIds.length === 0) errors.push(`❌ ${at}: sourceMomentIds 必須是非空陣列`);
+        if (!Array.isArray(m.clueIds) || m.clueIds.length === 0) errors.push(`❌ ${at}: clueIds 必須是非空陣列`);
+        if (typeof m.sceneCardRef !== 'string' || m.sceneCardRef.trim() === '') errors.push(`❌ ${at}: sceneCardRef 必須是非空字串（例如 "M06"）`);
+        (m.sourceMomentIds || []).forEach((sid) => {
+          if (typeof sid !== 'number' || sid < 1 || sid > 14) errors.push(`❌ ${at}: sourceMomentIds 包含無效值 ${sid}`);
+        });
+      });
+      for (let i = 1; i <= 10; i++) {
+        if (!ids.has(i)) errors.push(`❌ mainline-map.json: 缺少 mainMomentId=${i}`);
+      }
+    } catch (e) {
+      errors.push(`❌ mainline-map.json 解析失敗: ${e.message}`);
+    }
   }
 
   // 輸出結果

@@ -28,6 +28,10 @@
      - 失手：`turnsLeft==0` 或 命中 `failHard`
 4. **離場**：成功產出固定 `clueId`；失手進 `復活機制.md` 的回溯（看訊息回到 5 分鐘前）
 
+> 規格更新（開工版）：成功離場時，統一用 **`clueIds: string[]`**（可一次多條）。  
+> - 14 幕完整版現有 `clueId` 允許保留，但工程端應先 normalize → `clueIds=[clueId]`。  
+> - 精簡 10 幕主線請直接讀 `moment-configs/mainline-map.json` 取得該幕的 `clueIds`。
+
 ### 1.2 多 NPC（同幕多人在場）
 
 仍以 `keyNpc` 為主，其他人只能「插話」，不主導判定。
@@ -58,6 +62,7 @@
 
 - `MomentConfig`
   - `momentId`
+  - `sceneCardRef`（可選）：本幕入場背景卡 id（玩家可見；對齊 `moment-configs/mainline-map.json` 與 `主線10幕_入場背景卡.md`）
   - `opening`
   - `rounds[]`
   - `supportInterjections[]`（可選）
@@ -80,6 +85,8 @@
 ```json
 {
   "momentId": 7,
+  "sceneCardRef": "M05",
+  "clueIds": ["CLUE-07"],
   "opening": {
     "speaker": "主管",
     "mode": "ai",

@@ -175,7 +175,7 @@ Seed Range: 4000-4999
 
 ---
 
-### 主管（幕後黑手？）
+### 主管（制度背書者）
 
 #### 主管 - 基礎 Prompt
 ```
@@ -214,7 +214,7 @@ Seed Range: 5000-5999
 
 ---
 
-### HR（神秘人X / 真兇，但不明目張膽）
+### HR（制度守門人／程序至上，但不明目張膽）
 
 #### HR - 基礎 Prompt
 ```
@@ -231,7 +231,7 @@ Consistent Features:
 
 Personality Traits (affects expression):
 - Surface: Neutral, procedural, "I'm just following policy"
-- Hidden: Resentful, manipulative, enjoys control
+- Hidden: Risk-averse, emotionally detached, prioritizes policy over people
 
 Style: Realistic, office, subtle menace
 Model: RealisticVision
@@ -309,59 +309,59 @@ Props: Phone showing social media feed, person not in photos, gifts appear in ot
 Negative: bright, happy couples, cheerful
 ```
 
-### 場景四：被榨乾的一天
+### 場景四：被榨乾的一天（深夜辦公室）
 
-#### 圖片1：深夜街道
+#### 圖片1：深夜辦公室
 ```
-Scene: Late night street 2024, wide shot, almost empty, cold blue-gray color tone, dramatic lighting, film noir style, 1920x1080
+Scene: Late night office 2024, wide shot, almost empty, cold blue-gray color tone, dramatic lighting, film noir style, 1920x1080
 
-Characters: [主角 - 絕望/無力/孤獨] (walking alone, tired and desperate)
+Characters: [主角 - 絕望/無力/孤獨] (sitting alone at desk, exhausted)
 
-Props: Car headlights in distance (unusual angle, seems intentional)
+Props: Empty coffee cups, overtime checklist, monitor with unread messages (0), harsh fluorescent light
 
 Negative: crowded, daytime, bright, cheerful
 ```
 
-#### 圖片4：孤獨的街道（準備死亡）
+#### 圖片4：孤獨的座位（準備斷線）
 ```
-Scene: Late night street, wide shot, almost completely dark, cold color tone, fading to dark, dramatic lighting, 1920x1080
+Scene: Late night office, wide shot, almost completely dark, cold color tone, fading to dark, dramatic lighting, 1920x1080
 
-Characters: [主角 - 絕望/無力/孤獨] (standing alone)
+Characters: [主角 - 絕望/無力/孤獨] (slumped at desk, head lowered)
 
-Props: Car headlights approaching with unusual angle
+Props: Clock showing late hour, blinking monitor cursor, phone screen "0 unread"
 
 Negative: bright, daytime, crowded
 ```
 
-### 場景五：死亡發生
+### 場景五：過勞斷線（急診／辦公室）
 
-#### 圖片1：街道場景
+#### 圖片1：辦公桌前倒下
 ```
-Scene: Late night street 2024, wide shot, cold color tone, dramatic lighting, 1920x1080
+Scene: Late night office 2024, wide shot, cold color tone, dramatic lighting, 1920x1080
 
-Characters: [主角 - 絕望/無力/孤獨] (walking alone)
+Characters: [主角 - 絕望/無力/孤獨] (collapsing at desk, blurred motion)
 
-Props: Car headlights in distance (unusual angle, seems intentional)
+Props: Keyboard, papers, phone slipping off desk
 
-Negative: bright, safe, normal traffic
+Negative: bright, safe, daytime, cheerful
 ```
 
 #### 圖片2：強烈白光
 ```
-Scene: Extreme close-up, intense white light, car headlights suddenly bright, full white screen, high contrast, dramatic, 1920x1080
+Scene: Extreme close-up, intense white fluorescent light (ceiling light / ER light), full white screen, high contrast, dramatic, 1920x1080
 
-Characters: [模糊人影] (may be person pushing or in car, blurred figure in light)
+Characters: [模糊人影] (medical staff silhouettes, blurred)
 
 Negative: dark, soft light
 ```
 
-#### 圖片3：撞擊瞬間
+#### 圖片3：心跳監測歸零
 ```
-Scene: Extreme close-up, blurred motion, fast movement, impact moment, high contrast, dramatic, 1920x1080
+Scene: Extreme close-up, heart monitor line flattening, high contrast, dramatic, 1920x1080
 
-Characters: [主角] (being hit, blurred motion)
+Characters: [主角] (out of frame / implied)
 
-Props: Phone falling, screen shattered, blurred figure in car or behind
+Props: Monitor, EKG line, faint reflection of ceiling light
 
 Negative: clear, stable, calm
 ```
@@ -370,9 +370,9 @@ Negative: clear, stable, calm
 ```
 Scene: Extreme close-up, completely dark, gradually fading, dramatic, 1920x1080
 
-Characters: [模糊人影] (may be killer, unclear, blurred in background)
+Characters: [模糊人影] (office silhouettes passing by, blurred, no one looking back)
 
-Props: Shattered phone screen lights up, 0 unread messages, calendar 2024, question marks appearing, clue fragments appearing
+Props: Phone screen lights up, 0 unread messages, calendar 2024, question marks appearing, clue fragments appearing
 
 Negative: bright, clear, happy
 ```

@@ -1,0 +1,350 @@
+[
+	{
+		"evidenceId": "EV-CLUE-01-1",
+		"clueId": "CLUE-01",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2019/01/10 09:12",
+		"sourceLabel": "新人座位旁",
+		"titleKey": "copy.clueCard.CLUE-01.title",
+		"summaryKey": "copy.clueCard.CLUE-01.summary",
+		"highlightKey": "copy.clueCard.CLUE-01.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "同事A",
+			"insightTags": [
+				"boundary",
+				"probing",
+				"mask"
+			],
+			"excerpt": "「不用客氣，什麼都可以問我。」",
+			"rationale": "以『關心』包裝無邊界邀請，測你是否會主動交出私人資訊與工作界線。"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-02-1",
+		"clueId": "CLUE-02",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2019/01/10 16:40",
+		"sourceLabel": "第一次合作",
+		"titleKey": "copy.clueCard.CLUE-02.title",
+		"summaryKey": "copy.clueCard.CLUE-02.summary",
+		"highlightKey": "copy.clueCard.CLUE-02.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "同事A",
+			"insightTags": [
+				"probing",
+				"power",
+				"softPressure"
+			],
+			"excerpt": "「你很有潛力欸，那你上份工作怎麼離開的？」",
+			"rationale": "先給肯定降低防備，再用私密追問取得可被貼標籤的弱點素材。"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-03-1",
+		"clueId": "CLUE-03",
+		"evidenceType": "chat",
+		"renderMode": "text",
+		"occurredAt": "2019/03/20 21:18",
+		"sourceLabel": "聚會後群聊",
+		"titleKey": "copy.clueCard.CLUE-03.title",
+		"summaryKey": "copy.clueCard.CLUE-03.summary",
+		"highlightKey": "copy.clueCard.CLUE-03.highlight",
+		"payload": {
+			"type": "chat",
+			"threadName": "Team",
+			"messages": [
+				{
+					"from": "主管",
+					"text": "剛剛你說你最近壓力大？是工作還是私人？",
+					"at": "21:18",
+					"isHighlight": true
+				},
+				{
+					"from": "你",
+					"text": "都有一點，但我會處理。",
+					"at": "21:19"
+				},
+				{
+					"from": "主管",
+					"text": "嗯…了解。那週五你可以先頂一下嗎？",
+					"at": "21:20"
+				}
+			]
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-04-1",
+		"clueId": "CLUE-04",
+		"evidenceType": "notification",
+		"renderMode": "text",
+		"occurredAt": "2019/06/01 19:03",
+		"sourceLabel": "走廊",
+		"titleKey": "copy.clueCard.CLUE-04.title",
+		"summaryKey": "copy.clueCard.CLUE-04.summary",
+		"highlightKey": "copy.clueCard.CLUE-04.highlight",
+		"payload": {
+			"type": "notification",
+			"appName": "Chat",
+			"sender": "同事C",
+			"preview": "他剛剛又情緒了…你覺得要怎麼講？"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-05-1",
+		"clueId": "CLUE-05",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2019/06/01 19:10",
+		"sourceLabel": "私下談話",
+		"titleKey": "copy.clueCard.CLUE-05.title",
+		"summaryKey": "copy.clueCard.CLUE-05.summary",
+		"highlightKey": "copy.clueCard.CLUE-05.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "同事C",
+			"insightTags": [
+				"gaslighting",
+				"avoidance",
+				"lie"
+			],
+			"excerpt": "「你不要想太多，我沒有那個意思啦。」",
+			"rationale": "用模糊否認取代具體回答，讓你的提問看起來像『過度解讀』，避免承擔。"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-06-1",
+		"clueId": "CLUE-06",
+		"evidenceType": "timeline",
+		"renderMode": "text",
+		"occurredAt": "2019/07/15 11:30",
+		"sourceLabel": "交付紀錄",
+		"titleKey": "copy.clueCard.CLUE-06.title",
+		"summaryKey": "copy.clueCard.CLUE-06.summary",
+		"highlightKey": "copy.clueCard.CLUE-06.highlight",
+		"payload": {
+			"type": "timeline",
+			"title": "交付時間線（節錄）",
+			"items": [
+				{
+					"at": "07/10 18:05",
+					"action": "你提交版本 v1",
+					"note": "附上測試結果"
+				},
+				{
+					"at": "07/12 10:22",
+					"action": "主管回覆",
+					"note": "OK，先上"
+				},
+				{
+					"at": "07/15 09:03",
+					"action": "同事A轉交給主管",
+					"note": "『我協助你整理了』",
+					"isHighlight": true
+				},
+				{
+					"at": "07/15 09:10",
+					"action": "主管在會議提到成果",
+					"note": "未提及你",
+					"isHighlight": true
+				}
+			]
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-07-1",
+		"clueId": "CLUE-07",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2019/09/10 18:12",
+		"sourceLabel": "臨時加塞任務",
+		"titleKey": "copy.clueCard.CLUE-07.title",
+		"summaryKey": "copy.clueCard.CLUE-07.summary",
+		"highlightKey": "copy.clueCard.CLUE-07.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "同事A",
+			"insightTags": [
+				"threatened",
+				"selfPreservation",
+				"dutyDumping"
+			],
+			"excerpt": "「拜託你先幫我一下…我真的不行，我會被罵。」",
+			"rationale": "不是協作，是把風險丟給你；他害怕的對象在場外（更上位/制度）。"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-08-1",
+		"clueId": "CLUE-08",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2019/09/10 18:45",
+		"sourceLabel": "會議室門口",
+		"titleKey": "copy.clueCard.CLUE-08.title",
+		"summaryKey": "copy.clueCard.CLUE-08.summary",
+		"highlightKey": "copy.clueCard.CLUE-08.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "主管",
+			"insightTags": [
+				"collusion",
+				"silentAgreement",
+				"power"
+			],
+			"excerpt": "（他看了同事A一眼，點了一下頭。）",
+			"rationale": "權力者用非語言確認敘事：不需要指令就能完成責任傾倒。"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-09-1",
+		"clueId": "CLUE-09",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2019/09/30 22:05",
+		"sourceLabel": "深夜訊息",
+		"titleKey": "copy.clueCard.CLUE-09.title",
+		"summaryKey": "copy.clueCard.CLUE-09.summary",
+		"highlightKey": "copy.clueCard.CLUE-09.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "同事C",
+			"insightTags": [
+				"manipulation",
+				"loveBombing",
+				"lie"
+			],
+			"excerpt": "「我是為你好，你就聽我的一次。」",
+			"rationale": "以『為你好』封住你的判斷，讓你用情感交換承諾，形成綁定。"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-10-1",
+		"clueId": "CLUE-10",
+		"evidenceType": "notification",
+		"renderMode": "text",
+		"occurredAt": "2019/09/30 22:06",
+		"sourceLabel": "手機通知",
+		"titleKey": "copy.clueCard.CLUE-10.title",
+		"summaryKey": "copy.clueCard.CLUE-10.summary",
+		"highlightKey": "copy.clueCard.CLUE-10.highlight",
+		"payload": {
+			"type": "notification",
+			"appName": "Chat",
+			"sender": "同事C",
+			"preview": "他開始設界線了，明天會議我來處理？"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-11-1",
+		"clueId": "CLUE-11",
+		"evidenceType": "document",
+		"renderMode": "text",
+		"occurredAt": "2020/02/10 10:00",
+		"sourceLabel": "績效改善會議",
+		"titleKey": "copy.clueCard.CLUE-11.title",
+		"summaryKey": "copy.clueCard.CLUE-11.summary",
+		"highlightKey": "copy.clueCard.CLUE-11.highlight",
+		"payload": {
+			"type": "document",
+			"docTitle": "改善計畫（節錄）",
+			"sections": [
+				{
+					"heading": "條款",
+					"lines": [
+						"1. 依流程記錄",
+						"2. 未達成即進入下一階段"
+					],
+					"isHighlight": false
+				},
+				{
+					"heading": "確認",
+					"lines": [
+						"請於下方簽名確認以上內容已告知。"
+					],
+					"isHighlight": true
+				}
+			]
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-12-1",
+		"clueId": "CLUE-12",
+		"evidenceType": "chat",
+		"renderMode": "text",
+		"occurredAt": "2020/04/05 14:22",
+		"sourceLabel": "群聊截圖",
+		"titleKey": "copy.clueCard.CLUE-12.title",
+		"summaryKey": "copy.clueCard.CLUE-12.summary",
+		"highlightKey": "copy.clueCard.CLUE-12.highlight",
+		"payload": {
+			"type": "chat",
+			"threadName": "Team",
+			"messages": [
+				{
+					"from": "同事B",
+					"text": "聽說他又拖了？",
+					"at": "14:22"
+				},
+				{
+					"from": "同事A",
+					"text": "我也不清楚…我只是轉述。",
+					"at": "14:23",
+					"isHighlight": true
+				},
+				{
+					"from": "同事B",
+					"text": "那以後別找他了，省事。",
+					"at": "14:24"
+				}
+			]
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-13-1",
+		"clueId": "CLUE-13",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2020/02/25 19:40",
+		"sourceLabel": "公開羞辱",
+		"titleKey": "copy.clueCard.CLUE-13.title",
+		"summaryKey": "copy.clueCard.CLUE-13.summary",
+		"highlightKey": "copy.clueCard.CLUE-13.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "同事C",
+			"insightTags": [
+				"shame",
+				"threatened",
+				"control"
+			],
+			"excerpt": "「你不要再裝可憐了，大家都看得出來。」",
+			"rationale": "用羞辱把你打回沉默：讓你不敢講完整、也不敢要求核對事實。"
+		}
+	},
+	{
+		"evidenceId": "EV-CLUE-14-1",
+		"clueId": "CLUE-14",
+		"evidenceType": "insight",
+		"renderMode": "text",
+		"occurredAt": "2020/06/15 02:10",
+		"sourceLabel": "終局審判（內心）",
+		"titleKey": "copy.clueCard.CLUE-14.title",
+		"summaryKey": "copy.clueCard.CLUE-14.summary",
+		"highlightKey": "copy.clueCard.CLUE-14.highlight",
+		"payload": {
+			"type": "insight",
+			"speaker": "過去的自己",
+			"insightTags": [
+				"mechanism",
+				"dutyDumping",
+				"groupPressure",
+				"institutionalRhetoric"
+			],
+			"excerpt": "「我不是輸給某個人，我是把界線一次次交出去。」",
+			"rationale": "最終線索收束為結構：責任傾倒（工作）、群體風向（名聲）、制度話術（流程），三者咬合才會把你壓垮。"
+		}
+	}
+]

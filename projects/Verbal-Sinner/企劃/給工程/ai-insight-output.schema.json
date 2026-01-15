@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "verbal-sinner://schemas/ai-insight-output.schema.json",
+  "title": "AI Insight Output (Clue Card Extract)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["clueId", "insightTags", "excerpt", "rationale"],
+  "properties": {
+    "clueId": {
+      "type": "string",
+      "description": "CLUE-01 ~ CLUE-14（或為 bonus clue 的自定義 id）",
+      "pattern": "^CLUE-\\d{2}$"
+    },
+    "insightTags": {
+      "type": "array",
+      "description": "人際/情緒/界線/權力動態標籤（可用於判定與 UI filter）",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "enum": [
+          "boundary",
+          "probing",
+          "mask",
+          "power",
+          "dutyDumping",
+          "gaslighting",
+          "avoidance",
+          "manipulation",
+          "threatened",
+          "selfPreservation",
+          "collusion",
+          "silentAgreement",
+          "rumor",
+          "shame",
+          "control",
+          "evidence",
+          "institutionalRhetoric",
+          "groupPressure",
+          "mechanism"
+        ]
+      }
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "1–2 句摘錄（必須可回溯到本回合 transcript 的某句原文，禁止自行補劇情）",
+      "minLength": 6,
+      "maxLength": 80
+    },
+    "rationale": {
+      "type": "string",
+      "description": "規則化判斷依據（描述『為什麼這是線索』，禁止寫故事/旁白/新增事件）",
+      "minLength": 12,
+      "maxLength": 120
+    },
+    "speaker": {
+      "type": "string",
+      "description": "可選：這句摘錄的說話者",
+      "maxLength": 12
+    },
+    "confidence": {
+      "type": "number",
+      "description": "可選：0~1，供工程做閾值與 fallback",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
+
