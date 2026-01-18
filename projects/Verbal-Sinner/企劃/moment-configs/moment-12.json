@@ -5,19 +5,19 @@
   "title": "職場名聲被毀",
   "maxTurns": 7,
   "keyNpc": "同事群",
-  "supportNpcs": ["同事A"],
+  "supportNpcs": ["許子維"],
   "target": {
     "type": "attrThresholds",
     "value": ["同事群.尊重>=55", "同事群.傳播性<=35"]
   },
   "failHard": ["同事群.傳播性>=95"],
   "entryOverrides": {
-    "同事A": { "恐懼": 20 },
+    "許子維": { "恐懼": 20 },
     "同事群": { "傳播性": 10 }
   },
   "clueId": "CLUE-12",
   "seedMap": {
-    "同事A": ["THREATENED", "RUMOR"],
+    "許子維": ["T林予衡EATENED", "RUMOR"],
     "同事群": ["RUMOR"]
   },
   "opening": {
@@ -160,7 +160,7 @@
     },
     {
       "roundId": 6,
-      "npcPrompt": "同事群：同事A說你以前都不會這樣。（風向想拉回去）",
+      "npcPrompt": "同事群：許子維說你以前都不會這樣。（風向想拉回去）",
       "options": [
         {
           "id": "r6_o1",
@@ -209,9 +209,9 @@
   ],
   "supportInterjections": [
     {
-      "npc": "同事A",
+      "npc": "許子維",
       "priority": 10,
-      "when": "同事A.恐懼>=70",
+      "when": "許子維.恐懼>=70",
       "lineMode": "template",
       "templateKey": "interject.threatened.3"
     }

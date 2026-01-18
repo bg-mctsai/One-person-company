@@ -4,30 +4,30 @@
   "category": "職場",
   "title": "被推卸責任",
   "maxTurns": 5,
-  "keyNpc": "主管",
-  "supportNpcs": ["同事A"],
+  "keyNpc": "王明哲",
+  "supportNpcs": ["許子維"],
   "target": { "type": "emotion", "value": "尊重" },
   "failHard": [
-    "主管.警戒>=90",
-    "主管.壓力>=95"
+    "王明哲.警戒>=90",
+    "王明哲.壓力>=95"
   ],
   "entryOverrides": {
-    "同事A": { "恐懼": 20 }
+    "許子維": { "恐懼": 20 }
   },
   "clueId": "CLUE-07",
   "seedMap": {
-    "同事A": ["THREATENED", "RUMOR"],
-    "主管": ["WATCH"]
+    "許子維": ["T林予衡EATENED", "RUMOR"],
+    "王明哲": ["WATCH"]
   },
   "opening": {
-    "speaker": "主管",
+    "speaker": "王明哲",
     "mode": "ai",
     "npcPrompt": "冷、短句、壓迫感；先問責；不講道理只要結果；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "主管：這次延誤，你負責的部分怎麼解釋？（冷漠）",
+      "npcPrompt": "王明哲：這次延誤，你負責的部分怎麼解釋？（冷漠）",
       "options": [
         {
           "id": "r1_o1",
@@ -57,7 +57,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "主管：你說的都很好聽。我要的是能對得上的東西。（震驚/冷）",
+      "npcPrompt": "王明哲：你說的都很好聽。我要的是能對得上的東西。（震驚/冷）",
       "options": [
         {
           "id": "r2_o1",
@@ -87,7 +87,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "主管：……你現在是要教我怎麼管人？（憤怒/壓力上升）",
+      "npcPrompt": "王明哲：……你現在是要教我怎麼管人？（憤怒/壓力上升）",
       "options": [
         {
           "id": "r3_o1",
@@ -117,7 +117,7 @@
     },
     {
       "roundId": 4,
-      "npcPrompt": "主管：那你要我怎麼處理？（困惑/壓力）",
+      "npcPrompt": "王明哲：那你要我怎麼處理？（困惑/壓力）",
       "options": [
         {
           "id": "r4_o1",
@@ -147,7 +147,7 @@
     },
     {
       "roundId": 5,
-      "npcPrompt": "主管：……給我一個理由，讓我站得住。（震驚/尊重邊緣）",
+      "npcPrompt": "王明哲：……給我一個理由，讓我站得住。（震驚/尊重邊緣）",
       "options": [
         {
           "id": "r5_o1",
@@ -172,9 +172,9 @@
   ],
   "supportInterjections": [
     {
-      "npc": "同事A",
+      "npc": "許子維",
       "priority": 10,
-      "when": "同事A.恐懼>=70",
+      "when": "許子維.恐懼>=70",
       "lineMode": "template",
       "templateKey": "interject.threatened.1"
     }

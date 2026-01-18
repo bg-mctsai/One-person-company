@@ -184,11 +184,11 @@ Response 200:
     "category": "職場",
     "date": "2019/01/10",
     "maxTurns": 3,
-    "keyNpc": "同事A",
-    "supportNpcs": ["主管"],
+    "keyNpc": "許子維",
+    "supportNpcs": ["王明哲"],
     "target": { "type": "emotion", "value": "尊重" },
     "opening": {
-      "speaker": "同事A",
+      "speaker": "許子維",
       "mode": "ai",
       "npcPrompt": "..."
     },
@@ -235,7 +235,7 @@ Response 200:
     "challengeId": 1,
     "currentRound": 1,
     "maxTurns": 3,
-    "npcMessage": "新人～以後有事就直接找我。你跟主管聊了什麼？",
+    "npcMessage": "新人～以後有事就直接找我。你跟王明哲聊了什麼？",
     "options": [
       {
         "id": "r1_o1",
@@ -312,14 +312,14 @@ Body:
   "provider": "openai",
   "model": "gpt-4o-mini",
   "momentTitle": "被推卸責任",
-  "npcName": "主管",
-  "npcRole": "主管（結果導向）",
+  "npcName": "王明哲",
+  "npcRole": "王明哲（結果導向）",
   "npcVoice": "冷、短句、帶壓迫感",
   "npcEmotion": "冷漠",
   "npcTraits": "偏程序、怕麻煩、對證據敏感",
   "playerLine": "這不是我造成的。我可以把時間線和文件攤開。",
   "history": [
-    "主管：這次延誤，你負責的部分怎麼解釋？",
+    "王明哲：這次延誤，你負責的部分怎麼解釋？",
     "你：我先把時間線講清楚..."
   ],
   "constraints": "npc_reply 只能 1-2 句；不得出現「遊戲/關卡/玩家/挑戰/UI」"
@@ -369,7 +369,7 @@ Response 200:
 {
   "success": true,
   "data": {
-    "npcId": "同事A",
+    "npcId": "許子維",
     "currentEmotion": "困惑",
     "intensity": 45,
     "attributes": {
@@ -399,7 +399,7 @@ Headers:
 Body:
 {
   "userId": "user123",
-  "npcId": "同事A",
+  "npcId": "許子維",
   "emotionDelta": {
     "信任": -5,
     "警戒": 10,
@@ -412,7 +412,7 @@ Response 200:
 {
   "success": true,
   "data": {
-    "npcId": "同事A",
+    "npcId": "許子維",
     "currentEmotion": "困惑",
     "intensity": 50,
     "emotionChange": {
@@ -451,10 +451,10 @@ Response 200:
         "id": "CLUE-01",
         "momentId": 1,
         "title": "過度熱情",
-        "description": "同事A的「過度熱情」可能是偽裝",
+        "description": "許子維的「過度熱情」可能是偽裝",
         "type": "隱藏",
         "category": "職場",
-        "relatedNpcs": ["同事A"],
+        "relatedNpcs": ["許子維"],
         "tags": ["MASK", "PROBE"],
         "discoveredAt": "2024-01-15T10:30:00Z",
         "isKeyClue": false
@@ -487,11 +487,11 @@ Response 200:
     "id": "CLUE-07",
     "momentId": 7,
     "title": "害怕眼神",
-    "description": "同事A在默認責任的時候，眼神有些閃爍，似乎在害怕什麼。",
+    "description": "許子維在默認責任的時候，眼神有些閃爍，似乎在害怕什麼。",
     "type": "隱藏",
     "category": "職場",
-    "relatedNpcs": ["同事A"],
-    "tags": ["THREATENED"],
+    "relatedNpcs": ["許子維"],
+    "tags": ["T林予衡EATENED"],
     "discoveredAt": "2024-01-15T10:30:00Z",
     "isKeyClue": false
   },

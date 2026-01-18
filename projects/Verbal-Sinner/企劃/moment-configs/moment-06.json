@@ -4,31 +4,31 @@
   "category": "職場",
   "title": "第一次被搶功",
   "maxTurns": 5,
-  "keyNpc": "主管",
-  "supportNpcs": ["同事A"],
+  "keyNpc": "王明哲",
+  "supportNpcs": ["許子維"],
   "target": { "type": "emotion", "value": "尊重" },
-  "failHard": ["主管.憤怒>=85 且 主管.尊重<35"],
+  "failHard": ["王明哲.憤怒>=85 且 王明哲.尊重<35"],
   "entryOverrides": {
-    "主管": { "困惑": 20 }
+    "王明哲": { "困惑": 20 }
   },
   "clueId": "CLUE-06",
   "seedMap": {
-    "同事A": ["COLLUSION", "PROBE"],
-    "主管": ["KNOW"]
+    "許子維": ["COLLUSION", "PROBE"],
+    "王明哲": ["KNOW"]
   },
   "opening": {
-    "speaker": "主管",
+    "speaker": "王明哲",
     "mode": "ai",
-    "npcPrompt": "偏結果導向、短句、有壓迫；先把功勞往同事A那邊靠；不得出現禁用詞"
+    "npcPrompt": "偏結果導向、短句、有壓迫；先把功勞往許子維那邊靠；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "主管：這次做得不錯，同事A帶得很好。（把你消音）",
+      "npcPrompt": "王明哲：這次做得不錯，許子維帶得很好。（把你消音）",
       "options": [
         {
           "id": "r1_o1",
-          "text": "同事A確實有協調，但我也補充一下：核心設計與交付是我負責的這幾塊。",
+          "text": "許子維確實有協調，但我也補充一下：核心設計與交付是我負責的這幾塊。",
           "optionType": "溫和堅持",
           "tags": ["事實", "界線"]
         },
@@ -54,7 +54,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "主管：你是在抱怨嗎？這裡不看委屈。（冷）",
+      "npcPrompt": "王明哲：你是在抱怨嗎？這裡不看委屈。（冷）",
       "options": [
         {
           "id": "r2_o1",
@@ -84,11 +84,11 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "主管：證據？你拿什麼證明你做的？（震驚/警戒）",
+      "npcPrompt": "王明哲：證據？你拿什麼證明你做的？（震驚/警戒）",
       "options": [
         {
           "id": "r3_o1",
-          "text": "版本紀錄、提交時間、以及我跟同事A對齊的交付確認。你可以逐條核對。",
+          "text": "版本紀錄、提交時間、以及我跟許子維對齊的交付確認。你可以逐條核對。",
           "optionType": "溫和堅持",
           "tags": ["證據"]
         },
@@ -114,11 +114,11 @@
     },
     {
       "roundId": 4,
-      "npcPrompt": "主管：（轉向同事A）你怎麼看？（在看你會不會縮）",
+      "npcPrompt": "王明哲：（轉向許子維）你怎麼看？（在看你會不會縮）",
       "options": [
         {
           "id": "r4_o1",
-          "text": "我尊重同事A的協作，但我也要把我的範圍留在紀錄裡。避免下次出事算在我頭上。",
+          "text": "我尊重許子維的協作，但我也要把我的範圍留在紀錄裡。避免下次出事算在我頭上。",
           "optionType": "溫和堅持",
           "tags": ["界線", "程序"]
         },
@@ -138,7 +138,7 @@
     },
     {
       "roundId": 5,
-      "npcPrompt": "主管：行。那你下次就自己把範圍寫清楚。（尊重邊緣）",
+      "npcPrompt": "王明哲：行。那你下次就自己把範圍寫清楚。（尊重邊緣）",
       "options": [
         {
           "id": "r5_o1",
@@ -163,9 +163,9 @@
   ],
   "supportInterjections": [
     {
-      "npc": "同事A",
+      "npc": "許子維",
       "priority": 8,
-      "when": "同事A.警戒>=60",
+      "when": "許子維.警戒>=60",
       "lineMode": "template",
       "templateKey": "interject.collusion.1"
     }

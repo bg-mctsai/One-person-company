@@ -4,26 +4,26 @@
   "category": "辦公室霸凌延伸",
   "title": "辦公室戀情被利用",
   "maxTurns": 6,
-  "keyNpc": "同事C",
+  "keyNpc": "周承翰",
   "supportNpcs": [],
   "target": { "type": "emotion", "value": "尊重" },
-  "failHard": ["同事C.警戒>=90 且 同事C.尊重<25"],
+  "failHard": ["周承翰.警戒>=90 且 周承翰.尊重<25"],
   "entryOverrides": {
-    "同事C": { "警戒": 10 }
+    "周承翰": { "警戒": 10 }
   },
   "clueId": "CLUE-10",
   "seedMap": {
-    "同事C": ["REPORT", "MASK"]
+    "周承翰": ["REPORT", "MASK"]
   },
   "opening": {
-    "speaker": "同事C",
+    "speaker": "周承翰",
     "mode": "ai",
     "npcPrompt": "閃躲、怕被看見；會用甜話拖延；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "同事C：我不是不想公開，只是時機不對。（先拖）",
+      "npcPrompt": "周承翰：我不是不想公開，只是時機不對。（先拖）",
       "options": [
         {
           "id": "r1_o1",
@@ -53,7 +53,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "同事C：你怎麼突然變這麼敏感？你以前不會這樣。（推責）",
+      "npcPrompt": "周承翰：你怎麼突然變這麼敏感？你以前不會這樣。（推責）",
       "options": [
         {
           "id": "r2_o1",
@@ -83,7 +83,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "同事C：（手機又亮了一下）別想那麼多，我最在乎的是你。（REPORT/MASK 種子）",
+      "npcPrompt": "周承翰：（手機又亮了一下）別想那麼多，我最在乎的是你。（REPORT/MASK 種子）",
       "options": [
         {
           "id": "r3_o1",
@@ -113,7 +113,7 @@
     },
     {
       "roundId": 4,
-      "npcPrompt": "同事C：你逼我我就會想逃。（壓力/逃避）",
+      "npcPrompt": "周承翰：你逼我我就會想逃。（壓力/逃避）",
       "options": [
         {
           "id": "r4_o1",
@@ -137,7 +137,7 @@
     },
     {
       "roundId": 5,
-      "npcPrompt": "同事C：那你想要我怎麼做？（尊重邊緣）",
+      "npcPrompt": "周承翰：那你想要我怎麼做？（尊重邊緣）",
       "options": [
         {
           "id": "r5_o1",
@@ -161,7 +161,7 @@
     },
     {
       "roundId": 6,
-      "npcPrompt": "同事C：……好。我會處理。（尊重/壓力）",
+      "npcPrompt": "周承翰：……好。我會處理。（尊重/壓力）",
       "options": [
         {
           "id": "r6_o1",

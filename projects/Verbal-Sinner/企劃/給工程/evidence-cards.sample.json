@@ -11,7 +11,7 @@
 		"highlightKey": "copy.clueCard.CLUE-01.highlight",
 		"payload": {
 			"type": "insight",
-			"speaker": "同事A",
+			"speaker": "許子維",
 			"insightTags": [
 				"boundary",
 				"probing",
@@ -33,7 +33,7 @@
 		"highlightKey": "copy.clueCard.CLUE-02.highlight",
 		"payload": {
 			"type": "insight",
-			"speaker": "同事A",
+			"speaker": "許子維",
 			"insightTags": [
 				"probing",
 				"power",
@@ -58,7 +58,7 @@
 			"threadName": "Team",
 			"messages": [
 				{
-					"from": "主管",
+					"from": "王明哲",
 					"text": "剛剛你說你最近壓力大？是工作還是私人？",
 					"at": "21:18",
 					"isHighlight": true
@@ -69,7 +69,7 @@
 					"at": "21:19"
 				},
 				{
-					"from": "主管",
+					"from": "王明哲",
 					"text": "嗯…了解。那週五你可以先頂一下嗎？",
 					"at": "21:20"
 				}
@@ -89,7 +89,7 @@
 		"payload": {
 			"type": "notification",
 			"appName": "Chat",
-			"sender": "同事C",
+			"sender": "周承翰",
 			"preview": "他剛剛又情緒了…你覺得要怎麼講？"
 		}
 	},
@@ -105,7 +105,7 @@
 		"highlightKey": "copy.clueCard.CLUE-05.highlight",
 		"payload": {
 			"type": "insight",
-			"speaker": "同事C",
+			"speaker": "周承翰",
 			"insightTags": [
 				"gaslighting",
 				"avoidance",
@@ -136,18 +136,18 @@
 				},
 				{
 					"at": "07/12 10:22",
-					"action": "主管回覆",
+					"action": "王明哲回覆",
 					"note": "OK，先上"
 				},
 				{
 					"at": "07/15 09:03",
-					"action": "同事A轉交給主管",
+					"action": "許子維轉交給王明哲",
 					"note": "『我協助你整理了』",
 					"isHighlight": true
 				},
 				{
 					"at": "07/15 09:10",
-					"action": "主管在會議提到成果",
+					"action": "王明哲在會議提到成果",
 					"note": "未提及你",
 					"isHighlight": true
 				}
@@ -166,7 +166,7 @@
 		"highlightKey": "copy.clueCard.CLUE-07.highlight",
 		"payload": {
 			"type": "insight",
-			"speaker": "同事A",
+			"speaker": "許子維",
 			"insightTags": [
 				"threatened",
 				"selfPreservation",
@@ -188,13 +188,13 @@
 		"highlightKey": "copy.clueCard.CLUE-08.highlight",
 		"payload": {
 			"type": "insight",
-			"speaker": "主管",
+			"speaker": "王明哲",
 			"insightTags": [
 				"collusion",
 				"silentAgreement",
 				"power"
 			],
-			"excerpt": "（他看了同事A一眼，點了一下頭。）",
+			"excerpt": "（他看了許子維一眼，點了一下頭。）",
 			"rationale": "權力者用非語言確認敘事：不需要指令就能完成責任傾倒。"
 		}
 	},
@@ -210,7 +210,7 @@
 		"highlightKey": "copy.clueCard.CLUE-09.highlight",
 		"payload": {
 			"type": "insight",
-			"speaker": "同事C",
+			"speaker": "周承翰",
 			"insightTags": [
 				"manipulation",
 				"loveBombing",
@@ -233,7 +233,7 @@
 		"payload": {
 			"type": "notification",
 			"appName": "Chat",
-			"sender": "同事C",
+			"sender": "周承翰",
 			"preview": "他開始設界線了，明天會議我來處理？"
 		}
 	},
@@ -284,18 +284,18 @@
 			"threadName": "Team",
 			"messages": [
 				{
-					"from": "同事B",
+					"from": "何婉柔",
 					"text": "聽說他又拖了？",
 					"at": "14:22"
 				},
 				{
-					"from": "同事A",
+					"from": "許子維",
 					"text": "我也不清楚…我只是轉述。",
 					"at": "14:23",
 					"isHighlight": true
 				},
 				{
-					"from": "同事B",
+					"from": "何婉柔",
 					"text": "那以後別找他了，省事。",
 					"at": "14:24"
 				}
@@ -314,7 +314,7 @@
 		"highlightKey": "copy.clueCard.CLUE-13.highlight",
 		"payload": {
 			"type": "insight",
-			"speaker": "同事C",
+			"speaker": "周承翰",
 			"insightTags": [
 				"shame",
 				"threatened",

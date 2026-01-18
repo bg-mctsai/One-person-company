@@ -4,26 +4,26 @@
   "category": "職場",
   "title": "第一次合作",
   "maxTurns": 3,
-  "keyNpc": "同事A",
+  "keyNpc": "許子維",
   "supportNpcs": [],
   "target": { "type": "emotion", "value": "認同" },
-  "failHard": ["同事A.憤怒>=80"],
+  "failHard": ["許子維.憤怒>=80"],
   "entryOverrides": {
-    "同事A": { "信任": 5 }
+    "許子維": { "信任": 5 }
   },
   "clueId": "CLUE-02",
   "seedMap": {
-    "同事A": ["PROBE"]
+    "許子維": ["PROBE"]
   },
   "opening": {
-    "speaker": "同事A",
+    "speaker": "許子維",
     "mode": "ai",
     "npcPrompt": "稱讚、抬你、讓你放鬆；其實在摸你習慣；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "同事A：你這想法不錯欸，很有潛力。你做事都怎麼排？（稱讚=試探）",
+      "npcPrompt": "許子維：你這想法不錯欸，很有潛力。你做事都怎麼排？（稱讚=試探）",
       "options": [
         {
           "id": "r1_o1",
@@ -53,7 +53,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "同事A：哎唷我只是想學啦。你這種人很吃香。（繼續套話）",
+      "npcPrompt": "許子維：哎唷我只是想學啦。你這種人很吃香。（繼續套話）",
       "options": [
         {
           "id": "r2_o1",
@@ -83,7 +83,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "同事A：行，那這段你幫我處理一下，反正你很強。（丟鍋前奏）",
+      "npcPrompt": "許子維：行，那這段你幫我處理一下，反正你很強。（丟鍋前奏）",
       "options": [
         {
           "id": "r3_o1",

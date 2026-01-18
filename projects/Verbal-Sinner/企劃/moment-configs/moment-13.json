@@ -4,27 +4,27 @@
   "category": "辦公室霸凌延伸",
   "title": "辦公室戀情的徹底傷害",
   "maxTurns": 7,
-  "keyNpc": "同事C",
+  "keyNpc": "周承翰",
   "supportNpcs": ["旁人"],
   "target": { "type": "emotion", "value": "尊重" },
-  "failHard": ["同事C.警戒>=95", "同事C.壓力>=95"],
+  "failHard": ["周承翰.警戒>=95", "周承翰.壓力>=95"],
   "entryOverrides": {
-    "同事C": { "恐懼": 35 }
+    "周承翰": { "恐懼": 35 }
   },
   "clueId": "CLUE-13",
   "seedMap": {
-    "同事C": ["THREATENED", "SHAME"],
+    "周承翰": ["T林予衡EATENED", "SHAME"],
     "旁人": ["RUMOR"]
   },
   "opening": {
-    "speaker": "同事C",
+    "speaker": "周承翰",
     "mode": "ai",
     "npcPrompt": "冷、刀子嘴；在眾人面前羞辱你；把你逼到崩；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "同事C：你不要一直黏著我。你不覺得你很可笑嗎？（SHAME）",
+      "npcPrompt": "周承翰：你不要一直黏著我。你不覺得你很可笑嗎？（SHAME）",
       "options": [
         {
           "id": "r1_o1",
@@ -54,7 +54,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "同事C：哇你現在很會講欸。那你要怎樣？（壓力/羞辱續）",
+      "npcPrompt": "周承翰：哇你現在很會講欸。那你要怎樣？（壓力/羞辱續）",
       "options": [
         {
           "id": "r2_o1",
@@ -84,7 +84,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "同事C：（看向旁人）你看吧，他就是這樣。（把你當笑話）",
+      "npcPrompt": "周承翰：（看向旁人）你看吧，他就是這樣。（把你當笑話）",
       "options": [
         {
           "id": "r3_o1",
@@ -108,7 +108,7 @@
     },
     {
       "roundId": 4,
-      "npcPrompt": "同事C：你走啊。你敢嗎？（逼你崩/挑釁）",
+      "npcPrompt": "周承翰：你走啊。你敢嗎？（逼你崩/挑釁）",
       "options": [
         {
           "id": "r4_o1",
@@ -132,7 +132,7 @@
     },
     {
       "roundId": 5,
-      "npcPrompt": "同事C：你以為你很重要？你什麼都不是。（SHAME/壓力）",
+      "npcPrompt": "周承翰：你以為你很重要？你什麼都不是。（SHAME/壓力）",
       "options": [
         {
           "id": "r5_o1",
@@ -156,7 +156,7 @@
     },
     {
       "roundId": 6,
-      "npcPrompt": "同事C：你到底要我怎樣才滿意？（壓力/恐懼邊緣）",
+      "npcPrompt": "周承翰：你到底要我怎樣才滿意？（壓力/恐懼邊緣）",
       "options": [
         {
           "id": "r6_o1",
@@ -180,7 +180,7 @@
     },
     {
       "roundId": 7,
-      "npcPrompt": "同事C：……好。你別再講了。（尊重邊緣/壓力）",
+      "npcPrompt": "周承翰：……好。你別再講了。（尊重邊緣/壓力）",
       "options": [
         {
           "id": "r7_o1",

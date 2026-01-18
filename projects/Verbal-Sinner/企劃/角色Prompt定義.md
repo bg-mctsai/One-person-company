@@ -58,9 +58,9 @@ Seed Range: 1000-1999
 
 ---
 
-### 同事A（辦公室霸凌者）
+### 許子維（辦公室霸凌者）
 
-#### 同事A - 基礎 Prompt
+#### 許子維 - 基礎 Prompt
 ```
 Colleague A Character Prompt:
 A man in his early 30s, Asian features, well-groomed appearance, wearing professional business attire, friendly smile on surface but with subtle calculating eyes, slightly taller than average, confident posture, well-maintained hair, clean-shaven, professional appearance
@@ -83,23 +83,23 @@ Model: RealisticVision
 Seed Range: 2000-2999
 ```
 
-#### 同事A - 不同場景
+#### 許子維 - 不同場景
 
 **模糊出現（場景一、二）**
 ```
-[同事A基礎 Prompt], gaussian blur 40-60%, appearing in background, observing, subtle presence, cold color tone
+[許子維基礎 Prompt], gaussian blur 40-60%, appearing in background, observing, subtle presence, cold color tone
 ```
 
 **會議室場景（場景一）**
 ```
-[同事A基礎 Prompt], in meeting room, standing near documents, subtle smile, eyes showing calculation, professional setting, dramatic lighting
+[許子維基礎 Prompt], in meeting room, standing near documents, subtle smile, eyes showing calculation, professional setting, dramatic lighting
 ```
 
 ---
 
-### 同事B（同事群代表 / 輿論放大器）
+### 何婉柔（同事群代表 / 輿論放大器）
 
-#### 同事B - 基礎 Prompt
+#### 何婉柔 - 基礎 Prompt
 ```
 Colleague B Character Prompt:
 A person in their early to mid 30s, Asian features, office-smart appearance, wearing neat business casual, friendly talkative smile on surface but with cautious calculating eyes, average build, holding phone often, looks like a social hub in office, subtle superiority, film noir office aesthetic, realistic rendering, high contrast lighting
@@ -122,23 +122,23 @@ Model: RealisticVision
 Seed Range: 3000-3999
 ```
 
-#### 同事B - 不同場景
+#### 何婉柔 - 不同場景
 
 **模糊出現（辦公室場景）**
 ```
-[同事B基礎 Prompt], gaussian blur 40-60%, appearing in background, phone in hand, observing, subtle presence, cold color tone
+[何婉柔基礎 Prompt], gaussian blur 40-60%, appearing in background, phone in hand, observing, subtle presence, cold color tone
 ```
 
 **聊天記錄場景（辦公室）**
 ```
-[同事B基礎 Prompt], looking at phone, chat messages visible, subtle smug expression, cold color tone, dramatic lighting
+[何婉柔基礎 Prompt], looking at phone, chat messages visible, subtle smug expression, cold color tone, dramatic lighting
 ```
 
 ---
 
-### 同事C（辦公室戀情被利用）
+### 周承翰（辦公室戀情被利用）
 
-#### 同事C - 基礎 Prompt
+#### 周承翰 - 基礎 Prompt
 ```
 Colleague C Character Prompt:
 A person in their late 20s to early 30s, Asian features, attractive appearance, wearing professional business attire or stylish casual, gentle smile on surface but with distant eyes, average to slim build, well-groomed, professional appearance, office setting aesthetic
@@ -161,23 +161,23 @@ Model: RealisticVision
 Seed Range: 4000-4999
 ```
 
-#### 同事C - 不同場景
+#### 周承翰 - 不同場景
 
 **模糊出現（辦公室場景）**
 ```
-[同事C基礎 Prompt], gaussian blur 40-60%, appearing in background, looking at phone, distant expression, cold color tone, office setting
+[周承翰基礎 Prompt], gaussian blur 40-60%, appearing in background, looking at phone, distant expression, cold color tone, office setting
 ```
 
 **辦公室聚會場景（辦公室場景）**
 ```
-[同事C基礎 Prompt], in office setting, looking at phone, office party photos visible, photos without main character, distant expression, cold color tone, dramatic lighting
+[周承翰基礎 Prompt], in office setting, looking at phone, office party photos visible, photos without main character, distant expression, cold color tone, dramatic lighting
 ```
 
 ---
 
-### 主管（制度背書者）
+### 王明哲（制度背書者）
 
-#### 主管 - 基礎 Prompt
+#### 王明哲 - 基礎 Prompt
 ```
 Boss Character Prompt:
 A man in his late 30s to early 40s, Asian features, authoritative appearance, wearing formal business suit, serious expression with subtle uncertainty in eyes, taller than average, commanding presence, well-maintained appearance, office authority aesthetic
@@ -200,26 +200,26 @@ Model: RealisticVision
 Seed Range: 5000-5999
 ```
 
-#### 主管 - 不同場景
+#### 王明哲 - 不同場景
 
 **模糊出現（場景一）**
 ```
-[主管基礎 Prompt], gaussian blur 40-60%, appearing in background, observing, subtle presence, cold color tone
+[王明哲基礎 Prompt], gaussian blur 40-60%, appearing in background, observing, subtle presence, cold color tone
 ```
 
 **會議室場景（場景一）**
 ```
-[主管基礎 Prompt], in meeting room, standing at head of table, serious expression, eyes showing uncertainty, professional setting, dramatic lighting
+[王明哲基礎 Prompt], in meeting room, standing at head of table, serious expression, eyes showing uncertainty, professional setting, dramatic lighting
 ```
 
 ---
 
-### HR（制度守門人／程序至上，但不明目張膽）
+### 林予衡（制度守門人／程序至上，但不明目張膽）
 
-#### HR - 基礎 Prompt
+#### 林予衡 - 基礎 Prompt
 ```
-HR Character Prompt:
-A person in their early to mid 30s, Asian features, clean and composed appearance, wearing minimalistic business attire, neutral professional smile, eyes cold and controlled, posture calm and untouchable, holding a folder or laptop, "policy-first" aura, office HR setting, film noir style, realistic rendering, high contrast lighting
+林予衡 Character Prompt:
+A person in their early to mid 30s, Asian features, clean and composed appearance, wearing minimalistic business attire, neutral professional smile, eyes cold and controlled, posture calm and untouchable, holding a folder or laptop, "policy-first" aura, office 林予衡 setting, film noir style, realistic rendering, high contrast lighting
 
 Consistent Features:
 - Age: Early to mid 30s
@@ -238,11 +238,11 @@ Model: RealisticVision
 Seed Range: 6000-6999
 ```
 
-#### HR - 不同場景
+#### 林予衡 - 不同場景
 
 **程序宣讀（挑戰11 / 會議室）**
 ```
-[HR基礎 Prompt], in meeting room, holding printed documents, pointing to policy text, neutral smile, cold eyes, dramatic lighting, cold color tone
+[林予衡基礎 Prompt], in meeting room, holding printed documents, pointing to policy text, neutral smile, cold eyes, dramatic lighting, cold color tone
 ```
 
 ## 場景 Prompt 模板
@@ -264,8 +264,8 @@ Scene: Meeting room, medium shot, documents on table, name crossed out and repla
 
 Characters: 
 - [主角 - 困惑/憤怒/絕望] (looking at documents)
-- [同事A - 會議室場景] (standing near documents, blurred 40-60%)
-- [主管 - 會議室場景] (standing at head, blurred 40-60%)
+- [許子維 - 會議室場景] (standing near documents, blurred 40-60%)
+- [王明哲 - 會議室場景] (standing at head, blurred 40-60%)
 
 Negative: clear faces, bright, cheerful, daytime
 ```
@@ -289,7 +289,7 @@ Scene: Dark room, medium shot, chat messages on screen, cold color tone, shadows
 
 Characters:
 - [主角 - 震驚/憤怒/失望] (looking at phone)
-- [同事B - 聊天記錄場景] (blurred 40-60% in background)
+- [何婉柔 - 聊天記錄場景] (blurred 40-60% in background)
 
 Props: Phone showing chat messages, secrets forwarded, calendar 2020
 
@@ -415,10 +415,10 @@ Sampler: DPM++ 2M Karras or Euler a
 
 ### 角色專用 Seed 範圍
 - 主角: 1000-1999
-- 同事A: 2000-2999
-- 同事B: 3000-3999
-- 同事C: 4000-4999
-- 主管: 5000-5999
+- 許子維: 2000-2999
+- 何婉柔: 3000-3999
+- 周承翰: 4000-4999
+- 王明哲: 5000-5999
 - 場景: 6000-9999
 
 ### 風格設定
@@ -434,7 +434,7 @@ Mood: Dark, suspenseful, emotional, dramatic
 
 ### 高斯模糊（關鍵人物）
 - **透明度**: 40-60%
-- **應用對象**: 同事A、同事B、同事C、主管在背景出現時
+- **應用對象**: 許子維、何婉柔、周承翰、王明哲在背景出現時
 - **工具**: ComfyUI ImageBlur 節點 或 Photoshop/GIMP
 
 ### 半透明效果（問號、線索碎片）

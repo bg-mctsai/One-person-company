@@ -4,27 +4,27 @@
   "category": "職場",
   "title": "職場聚會",
   "maxTurns": 3,
-  "keyNpc": "主管",
+  "keyNpc": "王明哲",
   "supportNpcs": ["同事群"],
   "target": { "type": "emotion", "value": "尊重" },
-  "failHard": ["主管.警戒>=90"],
+  "failHard": ["王明哲.警戒>=90"],
   "entryOverrides": {
     "同事群": { "觀望": 10 }
   },
   "clueId": "CLUE-03",
   "seedMap": {
-    "主管": ["WATCH"],
+    "王明哲": ["WATCH"],
     "同事群": ["RUMOR"]
   },
   "opening": {
-    "speaker": "主管",
+    "speaker": "王明哲",
     "mode": "ai",
     "npcPrompt": "表面輕鬆，句子短；其實在觀察你會不會自曝/討好；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "主管：新人，來，講兩句。你覺得你自己能帶來什麼？（冷靜觀察）",
+      "npcPrompt": "王明哲：新人，來，講兩句。你覺得你自己能帶來什麼？（冷靜觀察）",
       "options": [
         {
           "id": "r1_o1",
@@ -84,7 +84,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "主管：行。那你記住：這裡看的是結果。（在觀察你會不會縮）",
+      "npcPrompt": "王明哲：行。那你記住：這裡看的是結果。（在觀察你會不會縮）",
       "options": [
         {
           "id": "r3_o1",

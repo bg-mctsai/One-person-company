@@ -89,7 +89,7 @@
 
 ### D) Document / PIP（會議文件 / 改善計畫）
 
-**用途**：CLUE-11（HR 程序壓迫、主管切割）這類文件證據。
+**用途**：CLUE-11（林予衡 程序壓迫、王明哲切割）這類文件證據。
 
 - **必要素材**：
   - A4 文件版面（標題/章節/表格）
@@ -118,9 +118,9 @@
 | CLUE-08 點頭示意=串通 | Timeline / Log（會議紀錄節錄） | 暗號/默許 |
 | CLUE-09 閃爍眼神=說謊 | Chat Screenshot | 「為你好」 |
 | CLUE-10 發送訊息=通報 | Notification | 立刻傳訊息 |
-| CLUE-11 主管害怕=切割 | Document / PIP | 改善計畫/簽名 |
-| CLUE-12 同事A害怕=被威脅 | Chat Screenshot（群聊截圖） | 斷章取義刷屏 |
-| CLUE-13 同事C害怕=被威脅 | Chat Screenshot（公開羞辱節錄） | 急著結案 |
+| CLUE-11 王明哲害怕=切割 | Document / PIP | 改善計畫/簽名 |
+| CLUE-12 許子維害怕=被威脅 | Chat Screenshot（群聊截圖） | 斷章取義刷屏 |
+| CLUE-13 周承翰害怕=被威脅 | Chat Screenshot（公開羞辱節錄） | 急著結案 |
 | CLUE-14 看懂機制 | Document（結構總結卡） | 三齒輪收束 |
 
 ---

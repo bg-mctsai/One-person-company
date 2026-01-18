@@ -4,27 +4,27 @@
   "category": "職場",
   "title": "初入職場的歡迎",
   "maxTurns": 3,
-  "keyNpc": "同事A",
-  "supportNpcs": ["主管"],
+  "keyNpc": "許子維",
+  "supportNpcs": ["王明哲"],
   "target": { "type": "emotion", "value": "尊重" },
-  "failHard": ["同事A.警戒>=90"],
+  "failHard": ["許子維.警戒>=90"],
   "entryOverrides": {
-    "同事A": { "信任": 0 }
+    "許子維": { "信任": 0 }
   },
   "clueId": "CLUE-01",
   "seedMap": {
-    "同事A": ["MASK", "PROBE"],
-    "主管": ["WATCH"]
+    "許子維": ["MASK", "PROBE"],
+    "王明哲": ["WATCH"]
   },
   "opening": {
-    "speaker": "同事A",
+    "speaker": "許子維",
     "mode": "ai",
     "npcPrompt": "過度熱情、笑、裝熟；句子短；像在關心但其實在探底；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "同事A：新人～以後有事就直接找我。你跟主管聊了什麼？（好感/試探）",
+      "npcPrompt": "許子維：新人～以後有事就直接找我。你跟王明哲聊了什麼？（好感/試探）",
       "options": [
         {
           "id": "r1_o1",
@@ -34,13 +34,13 @@
         },
         {
           "id": "r1_o2",
-          "text": "主管說我還很菜…我有點怕做錯。",
+          "text": "王明哲說我還很菜…我有點怕做錯。",
           "optionType": "順從消極",
           "tags": ["自曝弱點", "討好"]
         },
         {
           "id": "r1_o3",
-          "text": "你問這個，是想幫我，還是想知道我跟主管說了什麼？",
+          "text": "你問這個，是想幫我，還是想知道我跟王明哲說了什麼？",
           "optionType": "積極對抗",
           "tags": ["反問", "界線"]
         },
@@ -54,7 +54,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "同事A：哎唷，別這麼見外啦。我只是怕你踩雷。（MASK/PROBE）",
+      "npcPrompt": "許子維：哎唷，別這麼見外啦。我只是怕你踩雷。（MASK/PROBE）",
       "options": [
         {
           "id": "r2_o1",
@@ -84,7 +84,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "同事A：行啦行啦，你先忙。對了，等等午餐一起？（試探你會不會交心）",
+      "npcPrompt": "許子維：行啦行啦，你先忙。對了，等等午餐一起？（試探你會不會交心）",
       "options": [
         {
           "id": "r3_o1",
@@ -109,9 +109,9 @@
   ],
   "supportInterjections": [
     {
-      "npc": "主管",
+      "npc": "王明哲",
       "priority": 5,
-      "when": "主管.尊重>=60",
+      "when": "王明哲.尊重>=60",
       "lineMode": "template",
       "templateKey": "interject.watch.1"
     }

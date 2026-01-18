@@ -40,7 +40,7 @@
 
 - 每輪最多 **1 次插話**
 - 插話優先級（高→低）：
-  1. **supportNpc** 命中「插話觸發」條件（例如：同事A.恐懼>=70 → 露出破綻）
+  1. **supportNpc** 命中「插話觸發」條件（例如：許子維.恐懼>=70 → 露出破綻）
   2. `keyNpc` 受到玩家選項 `tag=證據` → 其他人先沉默（本輪不插話）
   3. 預設：不插話
 
@@ -88,14 +88,14 @@
   "sceneCardRef": "M05",
   "clueIds": ["CLUE-07"],
   "opening": {
-    "speaker": "主管",
+    "speaker": "王明哲",
     "mode": "ai",
     "npcPrompt": "冷、短句、壓迫感；先問責"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "主管：問你延誤怎麼解釋（冷漠）",
+      "npcPrompt": "王明哲：問你延誤怎麼解釋（冷漠）",
       "inputMode": "freeText",
       "inputValidation": {
         "minLength": 5,
@@ -122,9 +122,9 @@
   ],
   "supportInterjections": [
     {
-      "npc": "同事A",
+      "npc": "許子維",
       "priority": 10,
-      "when": "同事A.恐懼>=70",
+      "when": "許子維.恐懼>=70",
       "lineMode": "template",
       "templateKey": "interject.threatened.1"
     }
@@ -206,7 +206,7 @@
 ```
 ┌─────────────────────────────────┐
 │ [NPC 對話框]                    │
-│ 主管：這次延誤，你負責的部分     │
+│ 王明哲：這次延誤，你負責的部分     │
 │ 怎麼解釋？                       │
 └─────────────────────────────────┘
 

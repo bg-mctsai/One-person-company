@@ -4,32 +4,32 @@
   "category": "職場",
   "title": "被霸凌離職",
   "maxTurns": 7,
-  "keyNpc": "HR",
-  "supportNpcs": ["主管", "同事A"],
-  "target": { "type": "attrThresholds", "value": ["HR.尊重>=65"] },
+  "keyNpc": "林予衡",
+  "supportNpcs": ["王明哲", "許子維"],
+  "target": { "type": "attrThresholds", "value": ["林予衡.尊重>=65"] },
   "failHard": [
-    "HR.警戒>=95",
-    "HR.壓力>=95 且 HR.警戒>=85"
+    "林予衡.警戒>=95",
+    "林予衡.壓力>=95 且 林予衡.警戒>=85"
   ],
   "entryOverrides": {
-    "主管": { "恐懼": 30 },
-    "HR": { "警戒": 5 }
+    "王明哲": { "恐懼": 30 },
+    "林予衡": { "警戒": 5 }
   },
   "clueId": "CLUE-11",
   "seedMap": {
-    "主管": ["THREATENED", "KNOW"],
-    "同事A": ["COLLUSION", "PROBE"],
-    "HR": ["WATCH", "KNOW"]
+    "王明哲": ["T林予衡EATENED", "KNOW"],
+    "許子維": ["COLLUSION", "PROBE"],
+    "林予衡": ["WATCH", "KNOW"]
   },
   "opening": {
-    "speaker": "HR",
+    "speaker": "林予衡",
     "mode": "ai",
     "npcPrompt": "程序冷硬、短句；只吃文件與流程；不被情緒帶走；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "HR：我們收到申訴。請你直接說：你有沒有做這件事？（冷漠/警戒）",
+      "npcPrompt": "林予衡：我們收到申訴。請你直接說：你有沒有做這件事？（冷漠/警戒）",
       "options": [
         {
           "id": "r1_o1",
@@ -59,7 +59,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "HR：我們只看紀錄。你說的，拿得出來嗎？（冷/壓力）",
+      "npcPrompt": "林予衡：我們只看紀錄。你說的，拿得出來嗎？（冷/壓力）",
       "options": [
         {
           "id": "r2_o1",
@@ -89,7 +89,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "HR：這份資料跟申訴內容對不上。你怎麼解釋？（困惑/震驚邊緣）",
+      "npcPrompt": "林予衡：這份資料跟申訴內容對不上。你怎麼解釋？（困惑/震驚邊緣）",
       "options": [
         {
           "id": "r3_o1",
@@ -119,7 +119,7 @@
     },
     {
       "roundId": 4,
-      "npcPrompt": "HR：你是在指控有人偽造？你知道這很嚴重。（警戒上升）",
+      "npcPrompt": "林予衡：你是在指控有人偽造？你知道這很嚴重。（警戒上升）",
       "options": [
         {
           "id": "r4_o1",
@@ -149,17 +149,17 @@
     },
     {
       "roundId": 5,
-      "npcPrompt": "HR：主管那邊說法跟你不一樣。（看你怎麼站）",
+      "npcPrompt": "林予衡：王明哲那邊說法跟你不一樣。（看你怎麼站）",
       "options": [
         {
           "id": "r5_o1",
-          "text": "那就把說法放回紀錄：請你讓主管提供他依據的來源與時間點，我也提供我的。",
+          "text": "那就把說法放回紀錄：請你讓王明哲提供他依據的來源與時間點，我也提供我的。",
           "optionType": "溫和堅持",
           "tags": ["程序", "事實"]
         },
         {
           "id": "r5_o2",
-          "text": "如果主管的說法沒有紀錄支撐，那就不是事實，只是立場。請你按制度判斷。",
+          "text": "如果王明哲的說法沒有紀錄支撐，那就不是事實，只是立場。請你按制度判斷。",
           "optionType": "積極對抗",
           "tags": ["界線", "控場"]
         },
@@ -179,7 +179,7 @@
     },
     {
       "roundId": 6,
-      "npcPrompt": "HR：你現在想要什麼？（給你一次把界線插回來的機會）",
+      "npcPrompt": "林予衡：你現在想要什麼？（給你一次把界線插回來的機會）",
       "options": [
         {
           "id": "r6_o1",
@@ -203,7 +203,7 @@
     },
     {
       "roundId": 7,
-      "npcPrompt": "HR：……好。那你把你說的『可核對點』列出來。（尊重邊緣）",
+      "npcPrompt": "林予衡：……好。那你把你說的『可核對點』列出來。（尊重邊緣）",
       "options": [
         {
           "id": "r7_o1",
@@ -228,16 +228,16 @@
   ],
   "supportInterjections": [
     {
-      "npc": "主管",
+      "npc": "王明哲",
       "priority": 10,
-      "when": "主管.恐懼>=70",
+      "when": "王明哲.恐懼>=70",
       "lineMode": "template",
       "templateKey": "interject.know.1"
     },
     {
-      "npc": "同事A",
+      "npc": "許子維",
       "priority": 8,
-      "when": "同事A.恐懼>=70",
+      "when": "許子維.恐懼>=70",
       "lineMode": "template",
       "templateKey": "interject.threatened.2"
     }

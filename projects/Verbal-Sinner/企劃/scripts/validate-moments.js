@@ -12,19 +12,19 @@ const VALID_OPTION_TYPES = ['積極對抗', '溫和堅持', '情感訴求', '順
 
 // Moment Spec 表配置（從 Moment Spec 表.md 提取）
 const MOMENT_SPECS = {
-  1: { date: '2019/01/10', category: '職場', title: '初入職場的歡迎', maxTurns: 3, keyNpc: '同事A', supportNpcs: ['主管'] },
-  2: { date: '2019/02/15', category: '職場', title: '第一次合作', maxTurns: 3, keyNpc: '同事A', supportNpcs: [] },
-  3: { date: '2019/03/20', category: '職場', title: '職場聚會', maxTurns: 3, keyNpc: '主管', supportNpcs: ['同事群'] },
-  4: { date: '2019/06/01', category: '辦公室霸凌延伸', title: '辦公室戀情的開始', maxTurns: 3, keyNpc: '同事C', supportNpcs: [] },
-  5: { date: '2019/06/20', category: '辦公室霸凌延伸', title: '辦公室戀情的承諾', maxTurns: 4, keyNpc: '同事C', supportNpcs: [] },
-  6: { date: '2019/07/15', category: '職場', title: '第一次被搶功', maxTurns: 5, keyNpc: '主管', supportNpcs: ['同事A'] },
-  7: { date: '2019/09/10', category: '職場', title: '被推卸責任', maxTurns: 5, keyNpc: '主管', supportNpcs: ['同事A'] },
-  8: { date: '2019/11/05', category: '職場', title: '被當成工具', maxTurns: 5, keyNpc: '同事A', supportNpcs: ['主管'] },
-  9: { date: '2019/07/25', category: '辦公室霸凌延伸', title: '辦公室戀情的謊言', maxTurns: 5, keyNpc: '同事C', supportNpcs: [] },
-  10: { date: '2019/09/30', category: '辦公室霸凌延伸', title: '辦公室戀情被利用', maxTurns: 6, keyNpc: '同事C', supportNpcs: [] },
-  11: { date: '2020/02/10', category: '職場', title: '被霸凌離職', maxTurns: 7, keyNpc: 'HR', supportNpcs: ['主管', '同事A'] },
-  12: { date: '2020/04/05', category: '職場', title: '職場名聲被毀', maxTurns: 7, keyNpc: '同事群', supportNpcs: ['同事A'] },
-  13: { date: '2020/02/25', category: '辦公室霸凌延伸', title: '辦公室戀情的徹底傷害', maxTurns: 7, keyNpc: '同事C', supportNpcs: ['旁人'] },
+  1: { date: '2019/01/10', category: '職場', title: '初入職場的歡迎', maxTurns: 3, keyNpc: '許子維', supportNpcs: ['王明哲'] },
+  2: { date: '2019/02/15', category: '職場', title: '第一次合作', maxTurns: 3, keyNpc: '許子維', supportNpcs: [] },
+  3: { date: '2019/03/20', category: '職場', title: '職場聚會', maxTurns: 3, keyNpc: '王明哲', supportNpcs: ['同事群'] },
+  4: { date: '2019/06/01', category: '辦公室霸凌延伸', title: '辦公室戀情的開始', maxTurns: 3, keyNpc: '周承翰', supportNpcs: [] },
+  5: { date: '2019/06/20', category: '辦公室霸凌延伸', title: '辦公室戀情的承諾', maxTurns: 4, keyNpc: '周承翰', supportNpcs: [] },
+  6: { date: '2019/07/15', category: '職場', title: '第一次被搶功', maxTurns: 5, keyNpc: '王明哲', supportNpcs: ['許子維'] },
+  7: { date: '2019/09/10', category: '職場', title: '被推卸責任', maxTurns: 5, keyNpc: '王明哲', supportNpcs: ['許子維'] },
+  8: { date: '2019/11/05', category: '職場', title: '被當成工具', maxTurns: 5, keyNpc: '許子維', supportNpcs: ['王明哲'] },
+  9: { date: '2019/07/25', category: '辦公室霸凌延伸', title: '辦公室戀情的謊言', maxTurns: 5, keyNpc: '周承翰', supportNpcs: [] },
+  10: { date: '2019/09/30', category: '辦公室霸凌延伸', title: '辦公室戀情被利用', maxTurns: 6, keyNpc: '周承翰', supportNpcs: [] },
+  11: { date: '2020/02/10', category: '職場', title: '被霸凌離職', maxTurns: 7, keyNpc: '林予衡', supportNpcs: ['王明哲', '許子維'] },
+  12: { date: '2020/04/05', category: '職場', title: '職場名聲被毀', maxTurns: 7, keyNpc: '同事群', supportNpcs: ['許子維'] },
+  13: { date: '2020/02/25', category: '辦公室霸凌延伸', title: '辦公室戀情的徹底傷害', maxTurns: 7, keyNpc: '周承翰', supportNpcs: ['旁人'] },
   14: { date: '2020/06/15', category: '自我', title: '最後的求救', maxTurns: 8, keyNpc: '過去的自己', supportNpcs: [] },
 };
 

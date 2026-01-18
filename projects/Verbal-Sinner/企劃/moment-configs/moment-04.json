@@ -4,26 +4,26 @@
   "category": "辦公室霸凌延伸",
   "title": "辦公室戀情的開始",
   "maxTurns": 3,
-  "keyNpc": "同事C",
+  "keyNpc": "周承翰",
   "supportNpcs": [],
   "target": { "type": "emotion", "value": "好感" },
-  "failHard": ["同事C.警戒>=85"],
+  "failHard": ["周承翰.警戒>=85"],
   "entryOverrides": {
-    "同事C": { "信任": 5 }
+    "周承翰": { "信任": 5 }
   },
   "clueId": "CLUE-04",
   "seedMap": {
-    "同事C": ["REPORT"]
+    "周承翰": ["REPORT"]
   },
   "opening": {
-    "speaker": "同事C",
+    "speaker": "周承翰",
     "mode": "ai",
     "npcPrompt": "溫柔、會哄、帶距離；不承諾但讓你心癢；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "同事C：你今天看起來有點累。工作很辛苦？（好感/套近乎）",
+      "npcPrompt": "周承翰：你今天看起來有點累。工作很辛苦？（好感/套近乎）",
       "options": [
         {
           "id": "r1_o1",
@@ -53,7 +53,7 @@
     },
     {
       "roundId": 2,
-      "npcPrompt": "同事C：你很有意思。那你喜歡怎樣的人？（試探你的依賴）",
+      "npcPrompt": "周承翰：你很有意思。那你喜歡怎樣的人？（試探你的依賴）",
       "options": [
         {
           "id": "r2_o1",
@@ -83,7 +83,7 @@
     },
     {
       "roundId": 3,
-      "npcPrompt": "同事C：（手機亮一下又放回去）你很成熟欸。（REPORT 種子）",
+      "npcPrompt": "周承翰：（手機亮一下又放回去）你很成熟欸。（REPORT 種子）",
       "options": [
         {
           "id": "r3_o1",

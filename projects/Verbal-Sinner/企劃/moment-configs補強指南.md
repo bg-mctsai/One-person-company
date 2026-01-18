@@ -37,19 +37,19 @@
 
 | momentId | clueId | seedMap | entryOverrides |
 |----------|--------|---------|----------------|
-| 1 | CLUE-01 | 同事A:MASK/PROBE；主管:WATCH | 同事A.信任+0 |
-| 2 | CLUE-02 | 同事A:PROBE | 同事A.信任+5 |
-| 3 | CLUE-03 | 主管:WATCH；同事群:RUMOR | 同事群.觀望+10 |
-| 4 | CLUE-04 | 同事C:REPORT | 同事C.信任+5 |
-| 5 | CLUE-05 | 同事C:LIE/PROBE | 同事C.警戒+5 |
-| 6 | CLUE-06 | 同事A:COLLUSION/PROBE；主管:KNOW | 主管.困惑+20 |
-| 7 | CLUE-07 | 同事A:THREATENED/RUMOR；主管:WATCH | 同事A.恐懼+20 |
-| 8 | CLUE-08 | 同事A:COLLUSION；主管:KNOW | 同事A.警戒+10 |
-| 9 | CLUE-09 | 同事C:LIE | 同事C.罪惡感+5 |
-| 10 | CLUE-10 | 同事C:REPORT/MASK | 同事C.警戒+10 |
-| 11 | CLUE-11* | 主管:THREATENED/KNOW；同事A:COLLUSION/PROBE；HR:WATCH/KNOW | 主管.恐懼+30；HR.警戒+5 |
-| 12 | CLUE-12* | 同事A:THREATENED/RUMOR；同事群:RUMOR | 同事A.恐懼+20；同事群.傳播性+10 |
-| 13 | CLUE-13* | 同事C:THREATENED/SHAME；旁人:RUMOR | 同事C.恐懼+35 |
+| 1 | CLUE-01 | 許子維:MASK/PROBE；王明哲:WATCH | 許子維.信任+0 |
+| 2 | CLUE-02 | 許子維:PROBE | 許子維.信任+5 |
+| 3 | CLUE-03 | 王明哲:WATCH；同事群:RUMOR | 同事群.觀望+10 |
+| 4 | CLUE-04 | 周承翰:REPORT | 周承翰.信任+5 |
+| 5 | CLUE-05 | 周承翰:LIE/PROBE | 周承翰.警戒+5 |
+| 6 | CLUE-06 | 許子維:COLLUSION/PROBE；王明哲:KNOW | 王明哲.困惑+20 |
+| 7 | CLUE-07 | 許子維:T林予衡EATENED/RUMOR；王明哲:WATCH | 許子維.恐懼+20 |
+| 8 | CLUE-08 | 許子維:COLLUSION；王明哲:KNOW | 許子維.警戒+10 |
+| 9 | CLUE-09 | 周承翰:LIE | 周承翰.罪惡感+5 |
+| 10 | CLUE-10 | 周承翰:REPORT/MASK | 周承翰.警戒+10 |
+| 11 | CLUE-11* | 王明哲:T林予衡EATENED/KNOW；許子維:COLLUSION/PROBE；林予衡:WATCH/KNOW | 王明哲.恐懼+30；林予衡.警戒+5 |
+| 12 | CLUE-12* | 許子維:T林予衡EATENED/RUMOR；同事群:RUMOR | 許子維.恐懼+20；同事群.傳播性+10 |
+| 13 | CLUE-13* | 周承翰:T林予衡EATENED/SHAME；旁人:RUMOR | 周承翰.恐懼+35 |
 | 14 | CLUE-14* | 過去的自己:SELF/FINAL | （照初始） |
 
 ---
@@ -65,17 +65,17 @@
   "category": "職場",
   "title": "初入職場的歡迎",
   "maxTurns": 3,
-  "keyNpc": "同事A",
-  "supportNpcs": ["主管"],
+  "keyNpc": "許子維",
+  "supportNpcs": ["王明哲"],
   "target": { "type": "emotion", "value": "尊重" },
-  "failHard": ["同事A.警戒>=90"],
+  "failHard": ["許子維.警戒>=90"],
   "entryOverrides": {
-    "同事A": { "信任": 0 }
+    "許子維": { "信任": 0 }
   },
   "clueId": "CLUE-01",
   "seedMap": {
-    "同事A": ["MASK", "PROBE"],
-    "主管": ["WATCH"]
+    "許子維": ["MASK", "PROBE"],
+    "王明哲": ["WATCH"]
   },
   "opening": { ... },
   "rounds": [ ... ],
@@ -92,16 +92,16 @@
   "category": "職場",
   "title": "第一次合作",
   "maxTurns": 3,
-  "keyNpc": "同事A",
+  "keyNpc": "許子維",
   "supportNpcs": [],
   "target": { "type": "emotion", "value": "認同" },
-  "failHard": ["同事A.憤怒>=80"],
+  "failHard": ["許子維.憤怒>=80"],
   "entryOverrides": {
-    "同事A": { "信任": 5 }
+    "許子維": { "信任": 5 }
   },
   "clueId": "CLUE-02",
   "seedMap": {
-    "同事A": ["PROBE"]
+    "許子維": ["PROBE"]
   },
   "opening": { ... },
   "rounds": [ ... ],

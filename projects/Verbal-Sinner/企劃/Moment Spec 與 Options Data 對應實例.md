@@ -45,13 +45,13 @@ Options Data 格式（前端使用）
 | category | 職場 |
 | title | 被推卸責任 |
 | maxTurns | 5 |
-| keyNpc | 主管 |
-| supportNpcs | 同事A |
+| keyNpc | 王明哲 |
+| supportNpcs | 許子維 |
 | target | targetEmotion=尊重 |
-| failHard | 主管.警戒>=90 或 主管.壓力>=95 |
-| entryOverrides | 同事A.恐懼+20 |
+| failHard | 王明哲.警戒>=90 或 王明哲.壓力>=95 |
+| entryOverrides | 許子維.恐懼+20 |
 | clueIds | [CLUE-07] |
-| seedMap | 同事A:THREATENED/RUMOR；主管:WATCH |
+| seedMap | 許子維:T林予衡EATENED/RUMOR；王明哲:WATCH |
 
 ### 2.2 Options Data 格式（moment-07.json）
 
@@ -62,23 +62,23 @@ Options Data 格式（前端使用）
   "category": "職場",
   "title": "被推卸責任",
   "maxTurns": 5,
-  "keyNpc": "主管",
-  "supportNpcs": ["同事A"],
+  "keyNpc": "王明哲",
+  "supportNpcs": ["許子維"],
   "target": { "type": "emotion", "value": "尊重" },
   "failHard": [
-    "主管.警戒>=90",
-    "主管.壓力>=95"
+    "王明哲.警戒>=90",
+    "王明哲.壓力>=95"
   ],
   "clueIds": ["CLUE-07"],
   "opening": {
-    "speaker": "主管",
+    "speaker": "王明哲",
     "mode": "ai",
     "npcPrompt": "冷、短句、壓迫感；先問責；不講道理只要結果；不得出現禁用詞"
   },
   "rounds": [
     {
       "roundId": 1,
-      "npcPrompt": "主管：這次延誤，你負責的部分怎麼解釋？（冷漠）",
+      "npcPrompt": "王明哲：這次延誤，你負責的部分怎麼解釋？（冷漠）",
       "options": [
         {
           "id": "r1_o1",
@@ -110,9 +110,9 @@ Options Data 格式（前端使用）
   ],
   "supportInterjections": [
     {
-      "npc": "同事A",
+      "npc": "許子維",
       "priority": 10,
-      "when": "同事A.恐懼>=70",
+      "when": "許子維.恐懼>=70",
       "lineMode": "template",
       "templateKey": "interject.threatened.1"
     }
@@ -124,12 +124,12 @@ Options Data 格式（前端使用）
 
 ✅ **momentId**: 7 → 對應  
 ✅ **maxTurns**: 5 → rounds 數量 = 5  
-✅ **keyNpc**: 主管 → opening.speaker = "主管"  
+✅ **keyNpc**: 王明哲 → opening.speaker = "王明哲"  
 ✅ **target**: targetEmotion=尊重 → target.value = "尊重"  
-✅ **failHard**: 主管.警戒>=90 → failHard 包含此條件  
-✅ **entryOverrides**: 同事A.恐懼+20 → 後端處理（不在 JSON 中）  
+✅ **failHard**: 王明哲.警戒>=90 → failHard 包含此條件  
+✅ **entryOverrides**: 許子維.恐懼+20 → 後端處理（不在 JSON 中）  
 ✅ **clueIds**: [CLUE-07] → 成功後產出（JSON 或主線 map）  
-✅ **seedMap**: 同事A:THREATENED/RUMOR → 對應 `金手指提示庫.md`  
+✅ **seedMap**: 許子維:T林予衡EATENED/RUMOR → 對應 `金手指提示庫.md`  
 
 ---
 
