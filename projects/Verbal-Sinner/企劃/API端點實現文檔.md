@@ -1,7 +1,7 @@
 # API 端點實現文檔
 
 > 目的：定義所有 API 端點的具體請求/響應格式、錯誤處理、限流與安全措施。  
-> 依賴文件：`Firebase環境規劃.md`、`技術架構設計.md`。
+> 依賴文件：`Firebase環境規劃.md`、`roo-code/auto-dev-plan.md`。
 
 ---
 
@@ -14,9 +14,9 @@
 
 ### 1.2 認證方式
 
-- **Firebase Authentication**：所有 API 需要 JWT Token
+- **Firebase Authentication**：MVP 使用 **Anonymous Auth**（背景取得 uid），所有 API 以 JWT Token 驗證
 - **Header**：`Authorization: Bearer {token}`
-- **App Check**：所有 API 需要 App Check Token（防止濫用）
+- **App Check**：**MVP 先不啟用（關掉）**；上線前再補上（防止濫用）【尚未確認：何時啟用】
 
 ### 1.3 統一響應格式
 
@@ -586,9 +586,12 @@ Response 200:
 
 ---
 
-## 8) 回到 5 分鐘前（回溯）
+## 8) 重玩該關（再試一次）
 
-### 8.1 觸發回溯
+> MVP 先用「假廣告」與前端本地重置（不需 API）。  
+> 以下端點屬 **Post-MVP**（你要接真廣告/通行證/伺服器側控成本時才需要）。
+
+### 8.1 觸發重玩（建立重玩流程）
 
 ```typescript
 POST /api/revival/rewind
@@ -610,13 +613,13 @@ Response 200:
   "data": {
     "rewindId": "rewind123",
     "status": "pending_ad",
-    "message": "請觀看廣告以回到 5 分鐘前"
+    "message": "請觀看廣告以重玩該關"
   },
   "timestamp": "2024-01-15T10:30:00Z"
 }
 ```
 
-### 8.2 驗證回溯廣告完成
+### 8.2 驗證重玩廣告完成
 
 ```typescript
 POST /api/revival/verify-rewind-ad
@@ -641,7 +644,7 @@ Response 200:
     "sessionId": "session456",
     "currentRound": 1,
     "turnsLeft": 5,
-    "message": "已回到 5 分鐘前，NPC 屬性已重置"
+    "message": "已重玩該關（從開頭開始），NPC 屬性已重置"
   },
   "timestamp": "2024-01-15T10:30:00Z"
 }
@@ -728,12 +731,12 @@ Response 200:
 |---------|---------|
 | `/api/dialogue/generateNpcReply` | 每用戶每分鐘最多 10 次 |
 | `/api/revival/verify-ad` | 每用戶每小時最多 5 次 |
-| `/api/revival/verify-rewind-ad` | 每用戶每小時最多 10 次 |
+| `/api/revival/verify-rewind-ad` | 每用戶每小時最多 10 次（Post-MVP：重玩該關） |
 | 其他 API | 每用戶每分鐘最多 60 次 |
 
 ### 10.2 安全措施
 
-1. **App Check 驗證**：所有 API 需要 App Check Token
+1. **App Check 驗證**：MVP 先不啟用；上線前再要求 App Check Token（防濫用/控成本）
 2. **JWT 驗證**：所有 API 需要 Firebase Auth Token
 3. **輸入驗證**：使用 Zod 驗證所有輸入
 4. **SQL 注入防護**：使用參數化查詢
@@ -792,7 +795,7 @@ API 端點的完整實現包括：
 4. **對話系統 API**：開始對話、處理回應、生成 NPC 回應
 5. **情緒系統 API**：獲取/更新情緒狀態
 6. **線索系統 API**：獲取線索列表/詳情、關聯分析
-7. **復活機制 API**：觸發復活、驗證廣告、回溯
+7. **復活機制 API**：觸發復活、驗證廣告、重玩該關（Post-MVP）
 8. **結局系統 API**：計算結局分數、選擇結局
 9. **限流與安全**：限流規則、安全措施、錯誤處理
 

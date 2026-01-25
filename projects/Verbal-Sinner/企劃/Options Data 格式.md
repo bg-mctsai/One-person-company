@@ -23,10 +23,11 @@
    - 規則引擎依 `optionType`（+可選 tags）更新屬性
    - 規則引擎把更新後的屬性映射為表層情緒（`出場角色.md`）
    - `keyNpc` 回 1–2 句（AI 或模板，參考玩家輸入）
-   - 檢查 **成功/失手**：
-     - 成功：命中 `targetEmotion` 或 `targetAttrThresholds`
-     - 失手：`turnsLeft==0` 或 命中 `failHard`
-4. **離場**：成功產出固定 `clueId`；失手進 `復活機制.md` 的回溯（看訊息回到 5 分鐘前）
+  - 檢查 **成功/失手**：
+    - 成功（MVP）：命中 `target`（`targetEmotion` 或 `targetAttrThresholds`）
+    - 失手（MVP）：`turnsLeft==0`（未達成 target）
+    - 失手（Post-MVP）：可再加 `failHard`（先不做，避免規則引擎過早複雜化）
+4. **離場**：成功產出固定 `clueId`；失手進 `復活機制.md` 的「重玩該關」（看廣告再試一次）
 
 > 規格更新（開工版）：成功離場時，統一用 **`clueIds: string[]`**（可一次多條）。  
 > - 14 幕完整版現有 `clueId` 允許保留，但工程端應先 normalize → `clueIds=[clueId]`。  

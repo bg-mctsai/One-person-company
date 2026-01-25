@@ -701,9 +701,9 @@ service cloud.firestore {
    - 快速開始遊戲
    - 數據存儲在本地，可後續綁定帳號
 
-2. **Email/Password**（主要方式）
-   - 標準註冊/登入
-   - 支持密碼重置
+2. **Email/Password**（Post-MVP）
+   - MVP 不做（先保持最簡單）
+   - 後續若要跨裝置/找回進度再補
 
 3. **Google 登入**（後續擴展）
    - 一鍵登入
