@@ -200,3 +200,23 @@
 - [Roo Code Gemini 文檔](https://docs.roocode.com/providers/gemini)
 - [Google Gemini API 定價](https://ai.google.dev/gemini-api/docs/pricing)
 - [Roo Code API Configuration Profiles](https://docs.roocode.com/features/api-configuration-profiles)
+
+---
+
+## 11. 多模型切換策略（配額管理）
+
+> 當遇到配額限制時，可建立多個 Profile 使用不同模型
+
+### 快速設定指南
+詳細步驟請參考：**`gemini-multi-profile-setup.md`**
+
+### 建議配置
+- **Profile 1**：`Gemini 2.0 Flash (主要)` → 模型：`gemini-2.0-flash`
+- **Profile 2**：`Gemini 2.5 Flash Lite (備用1)` → 模型：`gemini-2.5-flash-lite`
+- **Profile 3**：`Gemini 1.5 Flash (備用2)` → 模型：`gemini-1.5-flash`
+
+### 切換流程
+當遇到「提供商錯誤」或「配額限制」時：
+1. 在 Roo Code 對話介面切換到備用 Profile
+2. 繼續工作，不中斷開發流程
+3. 總計可獲得 60 次/天的免費配額（3 個模型 × 20 次）

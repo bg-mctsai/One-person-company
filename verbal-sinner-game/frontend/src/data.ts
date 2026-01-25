@@ -1,99 +1,159 @@
+// data.ts - 專案核心數據結構定義
+// 遵循 SSOT 原則，對齊 JSON 配置和文件規範
 
-export interface Scene {
-  title: string;
-  images: string[];
-  dialogue: string[];
+// ========== 1. EvidenceCard 證物卡結構 (來自：projects/Verbal-Sinner/企劃/給工程/證物資料結構.md) ==========
+
+export type EvidenceType = 'notification' | 'chat' | 'timeline' | 'document' | 'insight';
+export type EvidenceRenderMode = 'text' | 'image';
+
+export interface ChatMessage {
+    from: string;
+    text: string;
+    at?: string; // 可選的時間戳
+    isHighlight?: boolean;
 }
 
-export const scenes: Scene[] = [
-  {
-    title: '場景一：被同事孤立',
-    images: [
-      '/images/scene1-image1.svg',
-      '/images/scene1-image2.svg',
-      '/images/scene1-image3.svg',
-      '/images/scene1-image4.svg',
-    ],
-    dialogue: [
-      '他們又背著我討論事情了...',
-      '為什麼總是不揪我？',
-      '我做錯了什麼嗎？',
-      '算了，一個人也挺好。',
-    ],
-  },
-  {
-    title: '場景二：被老闆 PUA',
-    images: [
-      '/images/scene2-image1.svg',
-      '/images/scene2-image2.svg',
-      '/images/scene2-image3.svg',
-      '/images/scene2-image4.svg',
-    ],
-    dialogue: [
-      '你很有潛力，但還可以做得更好。',
-      '這個專案很重要，只有你能勝任。',
-      '年輕人不要計較那麼多，多學點東西。',
-      '你確定這是你的極限了嗎？',
-    ],
-  },
-  {
-    title: '場景三：愛情只是交易',
-    images: [
-      '/images/scene3-image1.svg',
-      '/images/scene3-image2.svg',
-      '/images/scene3-image3.svg',
-      '/images/scene3-image4.svg',
-    ],
-    dialogue: [
-      '你愛我，就應該為我付出。',
-      '我們之間，還談什麼錢？',
-      '你看看別人家的男/女朋友。',
-      '我累了，我們就這樣吧。',
-    ],
-  },
-  {
-    title: '場景四：被榨乾的一天',
-    images: [
-      '/images/scene4-image1.svg',
-      '/images/scene4-image2.svg',
-      '/images/scene4-image3.svg',
-      '/images/scene4-image4.svg',
-    ],
-    dialogue: [
-      '為什麼我總是這麼累？',
-      '想找個人說說話，卻不知道打給誰。',
-      '鏡子裡的人，是誰？',
-      '手機，是我唯一的朋友。',
-    ],
-  },
-  {
-    title: '場景五：你只是工具',
-    images: [
-      '/images/scene5-image1.svg',
-      '/images/scene5-image2.svg',
-      '/images/scene5-image3.svg',
-      '/images/scene5-image4.svg',
-    ],
-    dialogue: [
-      '爸媽，我回來了。',
-      '他們只關心我的成就，不關心我的人。',
-      '我到底是什麼？',
-      '也許，我只是一個滿足他們期望的工具。',
-    ],
-  },
-  {
-    title: '場景六：被世界拋棄',
-    images: [
-      '/images/scene6-image1.svg',
-      '/images/scene6-image2.svg',
-      '/images/scene6-image3.svg',
-      '/images/scene6-image4.svg',
-    ],
-    dialogue: [
-      '這個世界，沒有我的容身之處。',
-      '為什麼沒有人理解我？',
-      '他們都在笑我。',
-      '結束，也許是新的開始。',
-    ],
-  },
-];
+export interface TimelineItem {
+    at: string;
+    action: string;
+    note?: string;
+    isHighlight?: boolean;
+}
+
+export interface DocumentSection {
+    heading: string;
+    lines: string[];
+    isHighlight?: boolean;
+}
+
+export type EvidencePayload =
+    | {
+        type: 'notification';
+        appName: string;
+        sender: string;
+        preview: string;
+    }
+    | {
+        type: 'chat';
+        threadName: string;
+        messages: ChatMessage[];
+    }
+    | {
+        type: 'timeline';
+        title: string;
+        items: TimelineItem[];
+    }
+    | {
+        type: 'document';
+        docTitle: string;
+        sections: DocumentSection[];
+    }
+    | {
+        type: 'insight';
+        speaker?: string; 
+        insightTags: string[]; // 例：boundary, power, manipulation, shame, dutyDumping
+        excerpt?: string; 
+        rationale: string; 
+    };
+
+export interface EvidenceCard {
+    evidenceId: string;
+    clueId: string; // 例：CLUE-01
+    evidenceType: EvidenceType;
+    renderMode: EvidenceRenderMode;
+    occurredAt: string;
+    sourceLabel: string;
+    
+    // 文案 keys (SSOT in 介面字串表.md)
+    titleKey: string;
+    summaryKey: string;
+    highlightKey?: string;
+
+    payload: EvidencePayload;
+}
+
+// ========== 2. Mainline Map 主線時刻表結構 (來自：projects/Verbal-Sinner/企劃/moment-configs/mainline-map.json) ==========
+
+export interface MainMoment {
+    mainMomentId: number; // 1-10
+    date: string; // YYYY/MM/DD
+    category: string; // 職場 | 辦公室霸凌延伸 | 自我
+    title: string; // 時刻標題
+    maxTurns: number; // 玩家最大句數
+    keyNpc: string; // 關鍵 NPC
+    supportNpcs: string[]; // 其他在場 NPC
+    sourceMomentIds: number[]; // 對應到 moment-configs/moment-xx.json 的 ID
+    clueIds: string[]; // 通關後獲得的線索 ID
+    sceneCardRef: string; // M01, M02, ...
+}
+
+export interface MainlineMap {
+    version: number;
+    mode: string; // mainline-10
+    totalMoments: number;
+    moments: MainMoment[];
+}
+
+// ========== 3. Moment Config 時刻配置結構 (來自：projects/Verbal-Sinner/企劃/moment-configs/moment-01.json) ==========
+
+export interface MomentOption {
+    id: string; // rX_oY
+    text: string; // 選項文案
+    optionType: string; // 溫和堅持 | 順從消極 | 積極對抗
+    tags: string[]; // 界線 | 控場 | 自曝弱點 等
+}
+
+export interface MomentRound {
+    roundId: number;
+    npcPrompt: string; // NPC 說話的原始 Prompt (包含人設/話術/情境)
+    options: MomentOption[];
+}
+
+export interface SupportInterjection {
+    npc: string;
+    priority: number;
+    when: string; // 觸發條件，例：王明哲.尊重>=60
+    lineMode: 'template' | 'direct';
+    templateKey: string; // 或 line
+}
+
+export interface MomentConfig {
+    momentId: number;
+    date: string;
+    category: string;
+    title: string;
+    maxTurns: number;
+    keyNpc: string;
+    supportNpcs: string[];
+    
+    target: { 
+        type: string; // emotion | status
+        value: string | string[]; // 尊重 | 權力 (修正為可為陣列)
+    };
+    failHard: string[]; // 例：["許子維.警戒>=90"]
+    entryOverrides?: { // 修正為可選
+        [npcName: string]: { [status: string]: number }; // 例：{ "許子維": { "信任": 0 } }
+    };
+    clueId: string;
+    seedMap: {
+        [npcName: string]: string[]; // 例：{ "許子維": ["MASK", "PROBE"] }
+    };
+    opening: {
+        speaker: string;
+        mode: 'ai' | 'script';
+        npcPrompt: string;
+    };
+    rounds: MomentRound[];
+    supportInterjections: SupportInterjection[];
+}
+
+// ========== 4. 配置載入狀態 (用於 ContentContext) ==========
+
+export interface ContentContextType {
+    mainlineMap: MainlineMap | null;
+    momentConfigs: { [momentId: number]: MomentConfig }; // 將 key 改為 number
+    isLoading: boolean;
+    isError: boolean;
+    error: string | null;
+    loadContent: () => Promise<void>;
+}
